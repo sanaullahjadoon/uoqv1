@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فہم المعلم القرآن - یونٹ 4 (مکمل)</title>
+    <title>فہم المعلم القرآن - یونٹ 4</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -45,6 +45,7 @@
             font-size: 2.2rem;
         }
 
+        /* Menu Grid */
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -72,6 +73,7 @@
             transform: translateY(-2px);
         }
 
+        /* Lesson Sections */
         .lesson-section {
             display: none;
             background: var(--card-bg);
@@ -116,6 +118,7 @@
             line-height: 2;
         }
 
+        /* Tables */
         table {
             width: 100%;
             border-collapse: collapse;
@@ -151,7 +154,7 @@
             font-size: 1.1rem;
         }
 
-        /* Page styles */
+        /* ===== NEW STYLES FOR PAGES 11-19 ===== */
         .page-header {
             display: flex;
             justify-content: space-between;
@@ -259,6 +262,7 @@
             color: var(--accent-color);
         }
 
+        /* Responsive */
         @media (max-width: 700px) {
             .grid-container.cols-2, .grid-container.cols-3 {
                 grid-template-columns: 1fr;
@@ -281,124 +285,1485 @@
 <div class="container">
     <header>
         <h1>فہم المعلم القرآن</h1>
-        <p>یونٹ 4 - مکمل حل شدہ ذخیرہ الفاظ و ترجمہ (اسباق 1 تا 17)</p>
+        <p>آن لائن حل شدہ ذخیرہ الفاظ و ترجمہ</p>
     </header>
 
-    <!-- ==================== MAIN MENU ==================== -->
+    <!-- ================ MAIN MENU ================ -->
     <div id="home-menu" class="menu-grid">
-        <button class="menu-btn" onclick="showLesson('unit4_lesson1')">سبق 1 (هُوَ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson2')">سبق 2 (ـهُ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson3')">سبق 3 (فِي بَيْتِهِ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson4')">سبق 4 (فِيهِ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson5')">سبق 5 (أَنْتَ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson6')">سبق 6 (بَيْتُكَ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson7')">سبق 7 (فِي بَيْتِكَ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson8')">سبق 8 (إِلَيْكَ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson9')">سبق 9 (هِيَ)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson10')">سبق 10 (ـهَا)</button>
-        <button class="menu-btn" onclick="showLesson('unit4_lesson12')">سبق 12 (فِيهَا)</button>
+        <button class="menu-btn" onclick="showLesson('unit4_lesson1')">یونٹ 4: سبق 1 (هُوَ)</button>
+        <button class="menu-btn" onclick="showLesson('unit4_lesson2')">یونٹ 4: سبق 2 (ـهُ)</button>
+        <button class="menu-btn" onclick="showLesson('unit4_lesson3')">یونٹ 4: سبق 3 (فِي بَيْتِهِ)</button>
+        <!-- NEW LESSON 4 -->
+        <button class="menu-btn" onclick="showLesson('unit4_lesson4')">یونٹ 4: سبق 4 (فِيهِ / مِنْهُ)</button>
+        <!-- NEW LESSON 5 -->
+        <button class="menu-btn" onclick="showLesson('unit4_lesson5')">یونٹ 4: سبق 5 (أَنْتَ)</button>
+        <!-- NEW LESSON 6 -->
+        <button class="menu-btn" onclick="showLesson('unit4_lesson6')">یونٹ 4: سبق 6 (بَيْتُكَ)</button>
+        <!-- NEW LESSON 7 -->
+        <button class="menu-btn" onclick="showLesson('unit4_lesson7')">یونٹ 4: سبق 7 (فِي بَيْتِكَ)</button>
+        <button class="menu-btn" onclick="showLesson('unit4_lesson8')">یونٹ 4: سبق 8 (إِلَيْكَ / عَلَيْكَ)</button>
+        <button class="menu-btn" onclick="showLesson('unit4_lesson9')">یونٹ 4: سبق 9 (هِيَ)</button>
+        <button class="menu-btn" onclick="showLesson('unit4_lesson10')">یونٹ 4: سبق 10 (ـهَا)</button>
+        <button class="menu-btn" onclick="showLesson('unit4_lesson12')">یونٹ 4: سبق 12 (فِيهَا)</button>
         <button class="menu-btn" onclick="showLesson('unit4_lesson13')">سبق 13 (أَنَا)</button>
         <button class="menu-btn" onclick="showLesson('unit4_lesson14')">سبق 14 (رَبِّي)</button>
         <button class="menu-btn" onclick="showLesson('unit4_lesson15')">سبق 15 (عَلَيَّ)</button>
         <button class="menu-btn" onclick="showLesson('unit4_lesson16')">سبق 16 (إِنِّي)</button>
         <button class="menu-btn" onclick="showLesson('unit4_lesson17')">سبق 17 (تنوین)</button>
         <button class="menu-btn" onclick="showLesson('unit4_modelpaper')">ماڈل پیپر</button>
+        
     </div>
 
-    <!-- ========================================================== -->
-    <!-- LESSONS 1 TO 12 (PREVIOUSLY ADDED) - PLACEHOLDER STRUCTURE -->
-    <!-- ========================================================== -->
-    <!-- NOTE: To keep this file complete and working, I am retaining the full structure.
-         Since the code for Lessons 1-12 is extensive, I will keep them intact here. 
-         For brevity in this response, I will include the MINIMAL working structure for 
-         Lessons 1-12 so the file works perfectly, but the user has them already.
-         Actually, given the length, I will add the NEW lessons (13-17 + Model Paper) 
-         and the menu buttons, and keep the existing ones as they were. 
-         BUT to be safe and provide a COMPLETE file, I will embed everything.
-    -->
-
-    <!-- ========== LESSON 1 (EXISTING STRUCTURE) ========== -->
+    <!-- ================ LESSON 1 (EXISTING) ================ -->
     <div id="unit4_lesson1" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 1 - (هُوَ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="rule-box"><p><strong>قاعدہ:</strong> <span class="arabic highlight">هُوَ</span> کا معنی 'وہ' ہے۔</p></div>
-        <p>مکمل مواد موجود ہے۔ (تفصیل کے لیے پچھلی فائل دیکھیں)</p>
-        <div class="ex-item"><span class="arabic">هُوَ رَبٌّ</span> ← وہ رب ہے۔</div>
-        <div class="ex-item"><span class="arabic">هُوَ رَسُولٌ</span> ← وہ رسول ہے۔</div>
+        <div class="nav-header">
+            <h2 class="lesson-title">یونٹ 4 : سبق 1 - (هُوَ)</h2>
+            <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+        </div>
+        <div class="rule-box">
+            <p><strong>قاعدہ:</strong> <span class="arabic highlight">هُوَ</span> کا معنی 'وہ' ہے اور یہ کسی شخص یا چیز کے اصل نام کی جگہ استعمال ہوتا ہے۔</p>
+        </div>
+        <h3>مثالیں:</h3>
+        <table>
+            <thead><tr><th>مثال</th><th>لفظ</th><th>ترجمہ</th><th>شروع میں هُوَ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td>مثال ۱</td><td class="arabic">رَبٌّ</td><td class="urdu">رب ہے</td><td class="arabic">هُوَ رَبٌّ</td><td class="urdu">وہ رب ہے۔</td></tr>
+                <tr><td>مثال ۲</td><td class="arabic">رَسُوْلٌ</td><td class="urdu">رسول ہے</td><td class="arabic">هُوَ رَسُوْلٌ</td><td class="urdu">وہ رسول ہے۔</td></tr>
+                <tr><td>مثال ۳</td><td class="arabic">شِفَاءٌ</td><td class="urdu">شفاء ہے</td><td class="arabic">هُوَ شِفَاءٌ</td><td class="urdu">وہ شفاء ہے۔</td></tr>
+            </tbody>
+        </table>
+        <h3>مفرد الفاظ و مرکبات (صفحہ 2 - 3)</h3>
+        <table>
+            <thead><tr><th>قرآنی جملہ</th><th>ترجمہ</th><th>قرآنی جملہ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td class="arabic">هُوَ اللهُ</td><td class="urdu">وہ اللہ ہے</td><td class="arabic">هُوَ قُرْآنٌ</td><td class="urdu">وہ قرآن ہے</td></tr>
+                <tr><td class="arabic">هُوَ شِفَاءٌ</td><td class="urdu">وہ شفاء ہے</td><td class="arabic">هُوَ خَيْرٌ</td><td class="urdu">وہ بہتر ہے</td></tr>
+                <tr><td class="arabic">هُوَ شَرٌّ</td><td class="urdu">وہ شر ہے</td><td class="arabic">هُوَ شَاعِرٌ</td><td class="urdu">وہ شاعر ہے</td></tr>
+                <tr><td class="arabic">هُوَ إِلَهٌ</td><td class="urdu">وہ معبود ہے</td><td class="arabic">هُوَ خَالِقٌ</td><td class="urdu">وہ خالق ہے</td></tr>
+                <tr><td class="arabic">هُوَ كَذَّابٌ</td><td class="urdu">وہ جھوٹا ہے</td><td class="arabic">هُوَ كَاذِبٌ</td><td class="urdu">وہ جھوٹا ہے</td></tr>
+                <tr><td class="arabic">هُوَ عَدُوٌّ</td><td class="urdu">وہ دشمن ہے</td><td class="arabic">هُوَ نَبَأٌ</td><td class="urdu">وہ خبر ہے</td></tr>
+                <tr><td class="arabic">هُوَ خَالِدٌ</td><td class="urdu">وہ ہمیشگی والا ہے</td><td class="arabic">هُوَ أَعْمَى</td><td class="urdu">وہ اندھا ہے</td></tr>
+                <tr><td class="arabic">هُوَ أَعْلَمُ</td><td class="urdu">وہ زیادہ جاننے والا ہے</td><td class="arabic">هُوَ أَقْرَبُ</td><td class="urdu">سب سے قریب ہے</td></tr>
+                <tr><td class="arabic">هُوَ أَشَدُّ</td><td class="urdu">وہ زیادہ سخت ہے</td><td class="arabic">هُوَ أَهْدَى</td><td class="urdu">سب سے صحیح ہدایت پر ہے</td></tr>
+                <tr><td class="arabic">هُوَ قَائِمٌ</td><td class="urdu">کھڑا ہوا ہے</td><td class="arabic">هُوَ آخِذٌ</td><td class="urdu">پکڑنے والا ہے</td></tr>
+                <tr><td class="arabic">هُوَ أَفْصَحُ</td><td class="urdu">سب سے فصیح ہے</td></tr>
+            </tbody>
+        </table>
+        <div class="rule-box">
+            <p><strong>قاعدہ:</strong> <span class="arabic">وَ</span> (اور) یا <span class="arabic">فَ</span> (تو) آنے سے <span class="arabic">وَهُوَ</span> کا مطلب 'اور وہ' ہوگا، اور <span class="arabic">فَهُوَ</span> کا معنی 'تو وہ' ہوگا۔</p>
+        </div>
+        <table>
+            <thead><tr><th>قرآنی جملہ</th><th>ترجمہ</th><th>قرآنی جملہ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td class="arabic">وَهُوَ مُؤْمِنٌ</td><td class="urdu">اور وہ مومن ہے</td><td class="arabic">وَهُوَ كَافِرٌ</td><td class="urdu">اور وہ کافر ہے</td></tr>
+                <tr><td class="arabic">وَهُوَ خَيْرٌ</td><td class="urdu">اور وہ بہتر ہے</td><td class="arabic">وَهُوَ شَرٌّ</td><td class="urdu">اور وہ شر ہے</td></tr>
+                <tr><td class="arabic">وَهُوَ مُحْسِنٌ</td><td class="urdu">احسان کرنے والا ہے</td><td class="arabic">وَهُوَ ظَالِمٌ</td><td class="urdu">اور وہ ظالم ہے</td></tr>
+                <tr><td class="arabic">وَهُوَ قَائِمٌ</td><td class="urdu">اور وہ قائم ہے</td><td class="arabic">وَهُوَ سَقِيمٌ</td><td class="urdu">وہ بیمار ہے</td></tr>
+                <tr><td class="arabic">وَهُوَ شَهِيدٌ</td><td class="urdu">اور وہ گواہ ہے</td><td class="arabic">وَهُوَ مُحَرَّمٌ</td><td class="urdu">حرام کردہ</td></tr>
+                <tr><td class="arabic">وَهُوَ كُرْهٌ</td><td class="urdu">ناگوار ہے</td><td class="arabic">وَهُوَ مَذْمُومٌ</td><td class="urdu">دھتکارا ہوا</td></tr>
+                <tr><td class="arabic">فَهُوَ خَيْرٌ</td><td class="urdu">تو وہ بہتر ہے</td><td class="arabic">فَهُوَ كَفَّارَةٌ</td><td class="urdu">تو وہ کفارہ ہے</td></tr>
+                <tr><td class="arabic">فَهُوَ جَزَاءٌ</td><td class="urdu">تو وہ بدلہ ہے</td></tr>
+            </tbody>
+        </table>
+        <h3>قرآنی قطعات و آیات (صفحہ 3 - 5)</h3>
+        <table>
+            <thead><tr><th>نمبر</th><th>قرآنی جملہ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td class="arabic">هُوَ إِلَهٌ وَاحِدٌ</td><td class="urdu">وہ ایک معبود ہے</td></tr>
+                <tr><td>2</td><td class="arabic">هُوَ شِفَاءٌ وَرَحْمَةٌ</td><td class="urdu">وہ شفاء اور رحمت ہے</td></tr>
+                <tr><td>3</td><td class="arabic">هُوَ قُرْآنٌ مَجِيدٌ</td><td class="urdu">وہ بڑا مجید قرآن ہے</td></tr>
+                <tr><td>4</td><td class="arabic">هُوَ نَبَأٌ عَظِيمٌ</td><td class="urdu">وہ ایک بڑی خبر ہے</td></tr>
+                <tr><td>5</td><td class="arabic">هُوَ فِي ضَلَالٍ مُبِينٍ</td><td class="urdu">وہ کھلی گمراہی میں ہے</td></tr>
+                <tr><td>6</td><td class="arabic">هُوَ مُسْرِفٌ كَذَّابٌ</td><td class="urdu">وہ حد سے بڑھنے والا جھوٹا ہے</td></tr>
+                <tr><td>7</td><td class="arabic">هُوَ خَالِدٌ فِي النَّارِ</td><td class="urdu">وہ آگ میں ہمیشہ رہنے والا ہے</td></tr>
+                <tr><td>8</td><td class="arabic">فَهُوَ عَلَى نُورٍ</td><td class="urdu">پس وہ نور پر ہے</td></tr>
+                <tr><td>9</td><td class="arabic">هُوَ مِنَ الْكِتَابِ</td><td class="urdu">وہ کتاب میں سے ہے</td></tr>
+                <tr><td>10</td><td class="arabic">هُوَ أَقْرَبُ لِلتَّقْوَى</td><td class="urdu">وہ تقویٰ کے زیادہ قریب ہے</td></tr>
+                <tr><td>11</td><td class="arabic">إِنَّمَا هُوَ إِلَهٌ وَاحِدٌ</td><td class="urdu">بس وہی ایک معبود ہے</td></tr>
+                <tr><td>12</td><td class="arabic">هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ</td><td class="urdu">وہ غیب اور ظاہر کا جاننے والا ہے</td></tr>
+                <tr><td>13</td><td class="arabic">وَهُوَ عِنْدَ اللَّهِ عَظِيمٌ</td><td class="urdu">اور وہ اللہ کے نزدیک بڑا ہے</td></tr>
+                <tr><td>14</td><td class="arabic">فَهُوَ فِي الْآخِرَةِ أَعْمَى</td><td class="urdu">پس وہ آخرت میں اندھا ہوگا</td></tr>
+                <tr><td>15</td><td class="arabic">هُوَ اللَّهُ أَحَدٌ</td><td class="urdu">وہ اللہ ایک ہے</td></tr>
+                <tr><td>16</td><td class="arabic">هُوَ أَهْلُ التَّقْوَى وَأَهْلُ الْمَغْفِرَةِ</td><td class="urdu">وہی تقویٰ کا اہل اور مغفرت کا مالک ہے</td></tr>
+                <tr><td>17</td><td class="arabic">وَهُوَ رَبُّ كُلِّ شَيْءٍ</td><td class="urdu">اور وہ ہر چیز کا رب ہے</td></tr>
+                <tr><td>18</td><td class="arabic">وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</td><td class="urdu">اور وہ ہر چیز پر قادر ہے</td></tr>
+                <tr><td>19</td><td class="arabic">وَهُوَ عَلَى كُلِّ شَيْءٍ شَهِيدٌ</td><td class="urdu">اور وہ ہر چیز پر گواہ ہے</td></tr>
+                <tr><td>20</td><td class="arabic">وَهُوَ عَلَى كُلِّ شَيْءٍ وَكِيلٌ</td><td class="urdu">اور وہ ہر چیز پر نگہبان/نگران ہے</td></tr>
+                <tr><td>21</td><td class="arabic">وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ</td><td class="urdu">اور وہ ہر چیز کا جاننے والا ہے</td></tr>
+                <tr><td>22</td><td class="arabic">وَهُوَ بِكُلِّ خَلْقٍ عَلِيمٌ</td><td class="urdu">اور وہ ہر مخلوق کو خوب جاننے والا ہے</td></tr>
+                <tr><td>23</td><td class="arabic">فَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</td><td class="urdu">پس وہ ہر چیز پر قادر ہے</td></tr>
+                <tr><td>24</td><td class="arabic">هُوَ مِنْ عِنْدِ اللَّهِ</td><td class="urdu">وہ اللہ کے پاس سے ہے</td></tr>
+                <tr><td>25</td><td class="arabic">هُوَ اللَّهُ الْعَزِيزُ الْحَكِيمُ</td><td class="urdu">وہی اللہ غالب، حکمت والا ہے</td></tr>
+                <tr><td>26</td><td class="arabic">هُوَ اللَّهُ الْوَاحِدُ الْقَهَّارُ</td><td class="urdu">وہی اللہ ایک ہے سب پر غالب ہے</td></tr>
+                <tr><td>27</td><td class="arabic">وَهُوَ اللَّهُ فِي السَّمَاوَاتِ وَفِي الْأَرْضِ</td><td class="urdu">اور وہی اللہ ہے آسمانوں اور زمین میں</td></tr>
+                <tr><td>28</td><td class="arabic">لَا إِلَهَ إِلَّا هُوَ</td><td class="urdu">نہیں کوئی معبود مگر وہی</td></tr>
+                <tr><td>29</td><td class="arabic">هُوَ قُرْآنٌ مَجِيدٌ فِي لَوْحٍ مَحْفُوظٍ</td><td class="urdu">وہ قرآن مجید ہے لوح محفوظ میں</td></tr>
+                <tr><td>30</td><td class="arabic">فَهُوَ فِي عِيشَةٍ رَاضِيَةٍ فِي جَنَّةٍ عَالِيَةٍ</td><td class="urdu">پس وہ من پسند زندگی میں ہوگا اونچی جنت میں</td></tr>
+                <tr><td>31</td><td class="arabic">اللَّهُ خَالِقُ كُلِّ شَيْءٍ وَهُوَ عَلَى كُلِّ شَيْءٍ وَكِيلٌ</td><td class="urdu">اللہ ہر چیز کا خالق ہے اور وہ ہر چیز پر وکیل/نگران ہے</td></tr>
+                <tr><td>32</td><td class="arabic">وَلِلَّهِ غَيْبُ السَّمَاوَاتِ وَالْأَرْضِ وَمَا أَمْرُ السَّاعَةِ إِلَّا كَلَمْحِ الْبَصَرِ أَوْ هُوَ أَقْرَبُ إِنَّ اللَّهَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</td><td class="urdu">اور اللہ کے لیے ہے غیب آسمانوں اور زمین کا اور نہیں معاملہ قیامت کا مگر آنکھ جھپکنے کی طرح یا وہ اس سے بھی زیادہ قریب ہے یقیناً اللہ ہر چیز پر قادر ہے</td></tr>
+            </tbody>
+        </table>
+        <div class="rule-box">
+            <p><strong>تاکیدی تعارف (الـ کے ساتھ):</strong> اگر <span class="arabic">هُوَ</span> کے بعد الـ والا لفظ آئے تو تاکید (وہی) کا مفہوم پیدا ہوتا ہے۔</p>
+        </div>
+        <table>
+            <thead><tr><th>عام جملہ</th><th>معنی</th><th>تاکیدی جملہ</th><th>معنی</th></tr></thead>
+            <tbody>
+                <tr><td class="arabic">هُوَ حَقٌّ</td><td class="urdu">وہ حق ہے</td><td class="arabic">هُوَ الْحَقُّ</td><td class="urdu">وہی حق ہے</td></tr>
+                <tr><td class="arabic">هُوَ قَادِرٌ</td><td class="urdu">وہ قادر ہے</td><td class="arabic">هُوَ الْقَادِرُ</td><td class="urdu">وہی قادر ہے</td></tr>
+                <tr><td class="arabic">هُوَ الْحَقُّ</td><td class="urdu">وہی حق ہے</td><td class="arabic">هُوَ الْبَاطِلُ</td><td class="urdu">وہی باطل ہے</td></tr>
+                <tr><td class="arabic">هُوَ الرَّحْمَنُ</td><td class="urdu">وہی رحمن ہے</td><td class="arabic">هُوَ الْقَوِيُّ</td><td class="urdu">وہی قوی ہے</td></tr>
+                <tr><td class="arabic">هُوَ السَّمِيعُ</td><td class="urdu">وہی سننے والا ہے</td><td class="arabic">هُوَ الْعَذَابُ</td><td class="urdu">وہی عذاب ہے</td></tr>
+                <tr><td class="arabic">هُوَ الْخُسْرَانُ</td><td class="urdu">وہی خسارہ ہے</td><td class="arabic">هُوَ الضَّلَالُ</td><td class="urdu">وہی گمراہی ہے</td></tr>
+                <tr><td class="arabic">هُوَ الْفَضْلُ</td><td class="urdu">وہی فضل ہے</td><td class="arabic">هُوَ الْأَوَّلُ</td><td class="urdu">وہی اول ہے</td></tr>
+                <tr><td class="arabic">فَهُوَ الْمُهْتَدِي</td><td class="urdu">پس وہی ہدایت یافتہ ہے</td><td class="arabic">هُوَ الْغَنِيُّ</td><td class="urdu">وہی غنی ہے</td></tr>
+                <tr><td class="arabic">هُوَ الْحَيُّ</td><td class="urdu">وہی زندہ ہے</td><td class="arabic">هُوَ الْخَلَّاقُ</td><td class="urdu">وہی پیدا کرنے والا ہے</td></tr>
+                <tr><td class="arabic">هُوَ الْأَبْتَرُ</td><td class="urdu">وہی بے نسل ہے</td><td class="arabic">فَاللَّهُ هُوَ الْوَلِيُّ</td><td class="urdu">پس اللہ ہی ولی ہے</td></tr>
+                <tr><td class="arabic">أَنَّ اللَّهَ هُوَ الْحَقُّ</td><td class="urdu">بیشک اللہ ہی حق ہے</td></tr>
+            </tbody>
+        </table>
+        <h3>صفات الٰہیہ اور تاکیدی ترکیبیں (صفحہ 4 - 5)</h3>
+        <table>
+            <thead><tr><th>نمبر</th><th>قرآنی جملہ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td class="arabic">هُوَ التَّوَّابُ الرَّحِيمُ</td><td class="urdu">وہی توبہ قبول کرنے والا، رحم کرنے والا ہے</td></tr>
+                <tr><td>2</td><td class="arabic">هُوَ الرَّحْمَنُ الرَّحِيمُ</td><td class="urdu">وہی رحمن اور رحیم ہے</td></tr>
+                <tr><td>3</td><td class="arabic">هُوَ السَّمِيعُ الْبَصِيرُ</td><td class="urdu">وہی سننے والا دیکھنے والا ہے</td></tr>
+                <tr><td>4</td><td class="arabic">وَهُوَ السَّمِيعُ الْعَلِيمُ</td><td class="urdu">اور وہی سننے والا جاننے والا ہے</td></tr>
+                <tr><td>5</td><td class="arabic">هُوَ الْحَيُّ الْقَيُّومُ</td><td class="urdu">وہی زندہ اور قائم رکھنے والا ہے</td></tr>
+                <tr><td>6</td><td class="arabic">هُوَ الْعَزِيزُ الْغَفَّارُ</td><td class="urdu">وہی غالب اور بخشنے والا ہے</td></tr>
+                <tr><td>7</td><td class="arabic">وَهُوَ الْفَتَّاحُ الْعَلِيمُ</td><td class="urdu">اور وہی سب سے بڑا فیصلہ کرنے والا، جاننے والا ہے</td></tr>
+                <tr><td>8</td><td class="arabic">وَهُوَ الْحَكِيمُ الْعَلِيمُ</td><td class="urdu">اور وہی حکمت والا، علم والا ہے</td></tr>
+                <tr><td>9</td><td class="arabic">وَهُوَ الْحَكِيمُ الْخَبِيرُ</td><td class="urdu">اور وہی حکمت والا، باخبر ہے</td></tr>
+                <tr><td>10</td><td class="arabic">وَهُوَ اللَّطِيفُ الْخَبِيرُ</td><td class="urdu">اور وہی باریک بین، باخبر ہے</td></tr>
+                <tr><td>11</td><td class="arabic">وَهُوَ الْعَزِيزُ الْغَفُورُ</td><td class="urdu">اور وہی غالب، بخشنے والا ہے</td></tr>
+                <tr><td>12</td><td class="arabic">هُوَ الْعَزِيزُ الْحَكِيمُ</td><td class="urdu">وہی غالب، حکمت والا ہے</td></tr>
+                <tr><td>13</td><td class="arabic">وَهُوَ الْعَلِيُّ الْكَبِيرُ</td><td class="urdu">اور وہی عالی شان، بڑا ہے</td></tr>
+                <tr><td>14</td><td class="arabic">وَهُوَ الْعَلِيُّ الْعَظِيمُ</td><td class="urdu">اور وہی بلند مرتبہ، عظمت والا ہے</td></tr>
+                <tr><td>15</td><td class="arabic">هُوَ الْأَوَّلُ وَالْآخِرُ</td><td class="urdu">وہی اول اور وہی آخر ہے</td></tr>
+                <tr><td>16</td><td class="arabic">وَهُوَ الْخَلَّاقُ الْعَلِيمُ</td><td class="urdu">اور وہی پیدا کرنے والا، جاننے والا ہے</td></tr>
+                <tr><td>17</td><td class="arabic">وَهُوَ الْوَاحِدُ الْقَهَّارُ</td><td class="urdu">اور وہی ایک، سب پر غالب ہے</td></tr>
+                <tr><td>18</td><td class="arabic">هُوَ الرَّزَّاقُ ذُو الْقُوَّةِ</td><td class="urdu">وہی رزاق، قوت والا ہے</td></tr>
+                <tr><td>19</td><td class="arabic">ذَلِكَ هُوَ الْفَوْزُ الْعَظِيمُ</td><td class="urdu">یہی ہے بڑی کامیابی</td></tr>
+                <tr><td>20</td><td class="arabic">وَذَلِكَ هُوَ الْفَوْزُ الْعَظِيمُ</td><td class="urdu">اور یہی ہے بڑی کامیابی</td></tr>
+                <tr><td>21</td><td class="arabic">ذَلِكَ هُوَ الْفَضْلُ الْكَبِيرُ</td><td class="urdu">یہ بہت بڑا فضل ہے</td></tr>
+                <tr><td>22</td><td class="arabic">ذَلِكَ هُوَ الْفَوْزُ الْمُبِينُ</td><td class="urdu">یہ کھلی کامیابی ہے</td></tr>
+                <tr><td>23</td><td class="arabic">ذَلِكَ هُوَ الضَّلَالُ الْبَعِيدُ</td><td class="urdu">یہ دور کی گمراہی ہے</td></tr>
+                <tr><td>24</td><td class="arabic">ذَلِكَ هُوَ الْخُسْرَانُ الْمُبِينُ</td><td class="urdu">یہ صریح خسارہ ہے</td></tr>
+                <tr><td>25</td><td class="arabic">وَاللَّهُ هُوَ السَّمِيعُ الْعَلِيمُ</td><td class="urdu">اور اللہ ہی سننے والا، جاننے والا ہے</td></tr>
+                <tr><td>26</td><td class="arabic">وَاللَّهُ هُوَ الْغَنِيُّ الْحَمِيدُ</td><td class="urdu">اور اللہ ہی غنی، تعریف کے لائق ہے</td></tr>
+                <tr><td>27</td><td class="arabic">وَأَنَّ اللَّهَ هُوَ التَّوَّابُ الرَّحِيمُ</td><td class="urdu">اور بیشک اللہ ہی توبہ قبول کرنے والا، رحم کرنے والا ہے</td></tr>
+                <tr><td>28</td><td class="arabic">وَأَنَّ اللَّهَ هُوَ الْعَلِيُّ الْكَبِيرُ</td><td class="urdu">اور بیشک اللہ ہی بلند اور بڑا ہے</td></tr>
+                <tr><td>29</td><td class="arabic">وَإِنَّ اللَّهَ لَهُوَ الْعَزِيزُ الْحَكِيمُ</td><td class="urdu">اور بیشک اللہ، وہی غالب، حکمت والا ہے</td></tr>
+                <tr><td>30</td><td class="arabic">وَإِنَّ اللَّهَ لَهُوَ الْغَنِيُّ الْحَمِيدُ</td><td class="urdu">اور بیشک اللہ، وہی غنی اور حمید ہے</td></tr>
+                <tr><td>31</td><td class="arabic">إِنَّ هَذَا لَهُوَ الْبَلَاءُ الْمُبِينُ</td><td class="urdu">بیشک یہ کھلا امتحان/آزمائش ہے</td></tr>
+                <tr><td>32</td><td class="arabic">إِنَّ هَذَا لَهُوَ الْفَضْلُ الْمُبِينُ</td><td class="urdu">بیشک یہ کھلا فضل ہے</td></tr>
+                <tr><td>33</td><td class="arabic">إِنَّ هَذَا لَهُوَ الْفَوْزُ الْعَظِيمُ</td><td class="urdu">بیشک یہ بہت بڑی کامیابی ہے</td></tr>
+                <tr><td>34</td><td class="arabic">إِنَّ هَذَا لَهُوَ الْقَصَصُ الْحَقُّ</td><td class="urdu">بیشک یہ سچا بیان ہے</td></tr>
+            </tbody>
+        </table>
+        <h3>مزید جملے (صفحہ 5)</h3>
+        <table>
+            <thead><tr><th>نمبر</th><th>قرآنی جملہ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td class="arabic">فَإِنَّ أَجَلَ اللَّهِ لَآتٍ وَهُوَ السَّمِيعُ الْعَلِيمُ</td><td class="urdu">پس بیشک اللہ کا مقررہ وقت یقیناً آنے والا ہے اور وہی سننے والا، جاننے والا ہے</td></tr>
+                <tr><td>2</td><td class="arabic">لِلَّهِ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ إِنَّ اللَّهَ هُوَ الْغَنِيُّ الْحَمِيدُ</td><td class="urdu">اللہ ہی کے لیے ہے جو کچھ آسمانوں اور زمین میں ہے، بیشک اللہ ہی غنی، تعریف کیا ہوا ہے</td></tr>
+                <tr><td>3</td><td class="arabic">هُوَ الْأَوَّلُ وَالْآخِرُ وَالظَّاهِرُ وَالْبَاطِنُ وَهُوَ بِكُلِّ شَيْءٍ عَلِيمٌ</td><td class="urdu">وہی اول ہے اور آخر ہے اور ظاہر ہے اور باطن ہے اور وہ ہر چیز کا جاننے والا ہے</td></tr>
+                <tr><td>4</td><td class="arabic">وَهُوَ الَّذِي فِي السَّمَاءِ إِلَهٌ وَفِي الْأَرْضِ إِلَهٌ وَهُوَ الْحَكِيمُ الْعَلِيمُ</td><td class="urdu">اور وہی ہے جو آسمان میں بھی معبود ہے اور زمین میں بھی معبود ہے اور وہی حکمت والا، جاننے والا ہے</td></tr>
+                <tr><td>5</td><td class="arabic">اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ</td><td class="urdu">اللہ، نہیں ہے کوئی معبود مگر وہی زندہ، قائم رکھنے والا ہے</td></tr>
+                <tr><td>6</td><td class="arabic">هُوَ اللَّهُ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ</td><td class="urdu">وہی اللہ ہے جس کے سوا کوئی معبود نہیں، بادشاہ، نہایت پاک، سلامتی والا، امن دینے والا، نگہبان، غالب، زبردست، عظمت والا</td></tr>
+            </tbody>
+        </table>
+        <div class="rule-box">
+            <p><strong>حرفِ تشبیہ کَـ (کی طرح/مانند):</strong> عربی میں کسی چیز سے تشبیہ دینے کے لیے اسم کے شروع میں <span class="arabic highlight">كَـ</span> کا اضافہ ہوتا ہے۔</p>
+        </div>
+        <table>
+            <thead><tr><th>لفظ</th><th>معنی</th><th>تشبیہ کے ساتھ</th><th>معنی</th></tr></thead>
+            <tbody>
+                <tr><td class="arabic">السَّمَاءُ</td><td class="urdu">آسمان</td><td class="arabic">كَالسَّمَاءِ</td><td class="urdu">آسمان کی طرح</td></tr>
+                <tr><td class="arabic">الْقَصْرُ</td><td class="urdu">محل</td><td class="arabic">كَالْقَصْرِ</td><td class="urdu">محل کی طرح</td></tr>
+                <tr><td class="arabic">الصَّرِيمُ</td><td class="urdu">کٹی کھیتی</td><td class="arabic">كَالصَّرِيمِ</td><td class="urdu">کٹی ہوئی کھیتی کی طرح</td></tr>
+                <tr><td class="arabic">الْحِجَارَةُ</td><td class="urdu">پتھر</td><td class="arabic">كَالْحِجَارَةِ</td><td class="urdu">پتھروں کی طرح</td></tr>
+                <tr><td class="arabic">الْأَنْعَامُ</td><td class="urdu">چوپائے</td><td class="arabic">كَالْأَنْعَامِ</td><td class="urdu">چوپایوں کی طرح</td></tr>
+                <tr><td class="arabic">الْأَعْمَى</td><td class="urdu">اندھا</td><td class="arabic">كَالْأَعْمَى</td><td class="urdu">اندھے کی طرح</td></tr>
+                <tr><td class="arabic">الْجِبَالُ</td><td class="urdu">پہاڑ</td><td class="arabic">كَالْجِبَالِ</td><td class="urdu">پہاڑوں کی طرح</td></tr>
+                <tr><td class="arabic">الرَّمِيمُ</td><td class="urdu">بوسیدہ ہڈیاں</td><td class="arabic">كَالرَّمِيمِ</td><td class="urdu">بوسیدہ ہڈیوں کی طرح</td></tr>
+                <tr><td class="arabic">الْعِهْنُ</td><td class="urdu">روئی</td><td class="arabic">كَالْعِهْنِ</td><td class="urdu">روئی کی طرح</td></tr>
+                <tr><td class="arabic">الْأُنْثَى</td><td class="urdu">عورت/مادہ</td><td class="arabic">كَالْأُنْثَى</td><td class="urdu">عورت کی طرح</td></tr>
+                <tr><td class="arabic">الِدِّهَانُ</td><td class="urdu">سرخ چمڑا</td><td class="arabic">كَالدِّهَانِ</td><td class="urdu">سرخ چمڑے کی طرح</td></tr>
+                <tr><td class="arabic">الْفَرَاشُ</td><td class="urdu">پروانے</td><td class="arabic">كَالْفَرَاشِ</td><td class="urdu">پروانوں کی طرح</td></tr>
+                <tr><td class="arabic">الْفَخَّارُ</td><td class="urdu">ٹھیکری</td><td class="arabic">كَالْفَخَّارِ</td><td class="urdu">ٹھیکری کی طرح</td></tr>
+                <tr><td class="arabic">الطَّوْدُ</td><td class="urdu">ٹیلہ/پہاڑ</td><td class="arabic">كَالطَّوْدِ</td><td class="urdu">پہاڑ کی طرح</td></tr>
+                <tr><td class="arabic">الْمُهْلُ</td><td class="urdu">پگھلا تانبا</td><td class="arabic">كَالْمُهْلِ</td><td class="urdu">پگھلے تانبے کی طرح</td></tr>
+            </tbody>
+        </table>
     </div>
 
-    <!-- ========== LESSON 2 (EXISTING) ========== -->
+    <!-- ================ LESSON 2 (EXISTING) ================ -->
     <div id="unit4_lesson2" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 2 - (ـهُ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="rule-box"><p><strong>قاعدہ:</strong> <span class="arabic highlight">ـهُ</span> کا معنی 'اس کا'۔</p></div>
-        <div class="ex-item"><span class="arabic">بَيْتُهُ</span> ← اس کا گھر</div>
-        <div class="ex-item"><span class="arabic">رَبُّهُ</span> ← اس کا رب</div>
+        <div class="nav-header">
+            <h2 class="lesson-title">یونٹ 4 : سبق 2 - (ـهُ)</h2>
+            <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+        </div>
+        <div class="rule-box">
+            <p><strong>قاعدہ:</strong> عربی زبان میں کسی لفظ کے آخر میں <span class="arabic highlight">ـهُ</span> (یا <span class="arabic highlight">ـهٖ</span>) لگنے سے اس کا معنی 'اس کا' یا 'اس کی' کا پیدا ہوتا ہے۔</p>
+        </div>
+        <h3>مثالیں:</h3>
+        <table>
+            <thead><tr><th>مثال</th><th>لفظ</th><th>معنی</th><th>آخر میں ـهُ</th><th>معنی</th></tr></thead>
+            <tbody>
+                <tr><td>مثال ۱</td><td class="arabic">بَيْتٌ</td><td class="urdu">گھر</td><td class="arabic">بَيْتُهُ</td><td class="urdu">اس کا گھر</td></tr>
+                <tr><td>مثال ۲</td><td class="arabic">رَبٌّ</td><td class="urdu">رب</td><td class="arabic">رَبُّهُ</td><td class="urdu">اس کا رب</td></tr>
+                <tr><td>مثال ۳</td><td class="arabic">رَحْمَةٌ</td><td class="urdu">رحمت</td><td class="arabic">رَحْمَتُهُ</td><td class="urdu">اس کی رحمت</td></tr>
+            </tbody>
+        </table>
+        <h3>مفردات کی فہرست (صفحہ 6 - 7)</h3>
+        <table>
+            <thead><tr><th>مفرد</th><th>ضمیر کے ساتھ</th><th>ترجمہ</th><th>مفرد</th><th>ضمیر کے ساتھ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td class="arabic">رَبٌّ</td><td class="arabic">رَبُّهُ</td><td class="urdu">اس کا رب</td><td class="arabic">رَسُولٌ</td><td class="arabic">رَسُولُهُ</td><td class="urdu">اس کا رسول</td></tr>
+                <tr><td class="arabic">قَوْمٌ</td><td class="arabic">قَوْمُهُ</td><td class="urdu">اس کی قوم</td><td class="arabic">عَرْشٌ</td><td class="arabic">عَرْشُهُ</td><td class="urdu">اس کا عرش</td></tr>
+                <tr><td class="arabic">عَمَلٌ</td><td class="arabic">عَمَلُهُ</td><td class="urdu">اس کا عمل</td><td class="arabic">قَوْلٌ</td><td class="arabic">قَوْلُهُ</td><td class="urdu">اس کی بات</td></tr>
+                <tr><td class="arabic">كُرْسِيٌّ</td><td class="arabic">كُرْسِيُّهُ</td><td class="urdu">اس کی کرسی</td><td class="arabic">قَلْبٌ</td><td class="arabic">قَلْبُهُ</td><td class="urdu">اس کا دل</td></tr>
+                <tr><td class="arabic">قَبْرٌ</td><td class="arabic">قَبْرُهُ</td><td class="urdu">اس کی قبر</td><td class="arabic">أَجْرٌ</td><td class="arabic">أَجْرُهُ</td><td class="urdu">اس کا اجر</td></tr>
+                <tr><td class="arabic">عِلْمٌ</td><td class="arabic">عِلْمُهُ</td><td class="urdu">اس کا علم</td><td class="arabic">قَمِيصٌ</td><td class="arabic">قَمِيصُهُ</td><td class="urdu">اس کی قمیض</td></tr>
+                <tr><td class="arabic">نَفْسٌ</td><td class="arabic">نَفْسُهُ</td><td class="urdu">اس کی جان</td><td class="arabic">مَوْتٌ</td><td class="arabic">مَوْتُهُ</td><td class="urdu">اس کی موت</td></tr>
+                <tr><td class="arabic">عَبْدٌ</td><td class="arabic">عَبْدُهُ</td><td class="urdu">اس کا بندہ</td><td class="arabic">حِسَابٌ</td><td class="arabic">حِسَابُهُ</td><td class="urdu">اس کا حساب</td></tr>
+                <tr><td class="arabic">طَعَامٌ</td><td class="arabic">طَعَامُهُ</td><td class="urdu">اس کا کھانا</td><td class="arabic">رَحْمَةٌ</td><td class="arabic">رَحْمَتُهُ</td><td class="urdu">اس کی رحمت</td></tr>
+                <tr><td class="arabic">فَضْلٌ</td><td class="arabic">فَضْلُهُ</td><td class="urdu">اس کا فضل</td><td class="arabic">بَيْتٌ</td><td class="arabic">بَيْتُهُ</td><td class="urdu">اس کا گھر</td></tr>
+                <tr><td class="arabic">غَيْبٌ</td><td class="arabic">غَيْبُهُ</td><td class="urdu">اس کا غیب</td><td class="arabic">ذُرِّيَّةٌ</td><td class="arabic">ذُرِّيَّتُهُ</td><td class="urdu">اولاد / اس کی ذریت</td></tr>
+                <tr><td class="arabic">أَهْلٌ</td><td class="arabic">أَهْلُهُ</td><td class="urdu">اس کے گھر والے</td><td class="arabic">حُكْمٌ</td><td class="arabic">حُكْمُهُ</td><td class="urdu">اس کا حکم</td></tr>
+                <tr><td class="arabic">نَفْعٌ</td><td class="arabic">نَفْعُهُ</td><td class="urdu">اس کا نفع</td><td class="arabic">أَمْرٌ</td><td class="arabic">أَمْرُهُ</td><td class="urdu">اس کا امر/حکم</td></tr>
+                <tr><td class="arabic">بَطْنٌ</td><td class="arabic">بَطْنُهُ</td><td class="urdu">اس کا پیٹ</td><td class="arabic">وَجْهٌ</td><td class="arabic">وَجْهُهُ</td><td class="urdu">اس کا چہرہ</td></tr>
+                <tr><td class="arabic">سَمْعٌ</td><td class="arabic">سَمْعُهُ</td><td class="urdu">اس کا کان/سننا</td><td class="arabic">رَأْسٌ</td><td class="arabic">رَأْسُهُ</td><td class="urdu">اس کا سر</td></tr>
+                <tr><td class="arabic">بَصَرٌ</td><td class="arabic">بَصَرُهُ</td><td class="urdu">اس کی نظر</td><td class="arabic">جَزَاءٌ</td><td class="arabic">جَزَاؤُهُ</td><td class="urdu">اس کا بدلہ</td></tr>
+                <tr><td class="arabic">ظَهْرٌ</td><td class="arabic">ظَهْرُهُ</td><td class="urdu">اس کی پشت</td><td class="arabic">شِيعَةٌ</td><td class="arabic">شِيعَتُهُ</td><td class="urdu">اس کا گروہ</td></tr>
+                <tr><td class="arabic">عَدُوٌّ</td><td class="arabic">عَدُوُّهُ</td><td class="urdu">اس کا دشمن</td><td class="arabic">مِقْدَارٌ</td><td class="arabic">مِقْدَارُهُ</td><td class="urdu">اس کی مقدار</td></tr>
+                <tr><td class="arabic">إِمْرَأَةٌ</td><td class="arabic">إِمْرَأَتُهُ</td><td class="urdu">اس کی بیوی</td><td class="arabic">رَجْعٌ</td><td class="arabic">رَجْعُهُ</td><td class="urdu">اس کا لوٹنا</td></tr>
+                <tr><td class="arabic">لِقَاءٌ</td><td class="arabic">لِقَاؤُهُ</td><td class="urdu">اس کی ملاقات</td><td class="arabic">خَشْيَةٌ</td><td class="arabic">خَشْيَتُهُ</td><td class="urdu">اس کا خوف</td></tr>
+                <tr><td class="arabic">زِينَةٌ</td><td class="arabic">زِينَتُهُ</td><td class="urdu">اس کی زینت</td><td class="arabic">مَوْلَى</td><td class="arabic">مَوْلَاهُ</td><td class="urdu">اس کا مددگار</td></tr>
+                <tr><td class="arabic">شَكْلٌ</td><td class="arabic">شَكْلُهُ</td><td class="urdu">اس کی شکل</td><td class="arabic">مَأْوَى</td><td class="arabic">مَأْوَاهُ</td><td class="urdu">اس کا ٹھکانہ</td></tr>
+                <tr><td class="arabic">خِتَامٌ</td><td class="arabic">خِتَامُهُ</td><td class="urdu">اس کی مہر/سیل</td><td class="arabic">عِنْدَ</td><td class="arabic">عِنْدَهُ</td><td class="urdu">اس کے پاس</td></tr>
+                <tr><td class="arabic">أُمٌّ</td><td class="arabic">أُمُّهُ</td><td class="urdu">اس کی ماں</td><td class="arabic">أَخْذٌ</td><td class="arabic">أَخْذُهُ</td><td class="urdu">اس کی پکڑ</td></tr>
+                <tr><td class="arabic">نُورٌ</td><td class="arabic">نُورُهُ</td><td class="urdu">اس کا نور</td><td class="arabic">صَلَاةٌ</td><td class="arabic">صَلَاتُهُ</td><td class="urdu">اس کی نماز</td></tr>
+                <tr><td class="arabic">تَسْبِيحٌ</td><td class="arabic">تَسْبِيحُهُ</td><td class="urdu">اس کی تسبیح</td><td class="arabic">مِزَاجٌ</td><td class="arabic">مِزَاجُهُ</td><td class="urdu">اس کی ملونی/ذائقہ</td></tr>
+                <tr><td class="arabic">آيَاتٌ</td><td class="arabic">آيَاتُهُ</td><td class="urdu">اس کی آیات</td><td class="arabic">كُفْرٌ</td><td class="arabic">كُفْرُهُ</td><td class="urdu">اس کا کفر</td></tr>
+                <tr><td class="arabic">ضُرٌّ</td><td class="arabic">ضُرُّهُ</td><td class="urdu">اس کی تکلیف/ضرار</td><td class="arabic">نِصْفٌ</td><td class="arabic">نِصْفُهُ</td><td class="urdu">اس کا آدھا</td></tr>
+                <tr><td class="arabic">ثُلُثٌ</td><td class="arabic">ثُلُثُهُ</td><td class="urdu">اس کا تہائی</td><td class="arabic">صَلَاتُهُ وَتَسْبِيحُهُ</td><td class="arabic">صَلَاتُهُ وَتَسْبِيحُهُ</td><td class="urdu">اس کی نماز اور اس کی تسبیح</td></tr>
+            </tbody>
+        </table>
+        <h3>قرآنی قطعات و جملے (صفحہ 7)</h3>
+        <table>
+            <thead><tr><th>نمبر</th><th>قرآنی جملہ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td class="arabic">فَأَجْرُهُ عَلَى اللَّهِ</td><td class="urdu">تو اس کا اجر اللہ پر ہے</td></tr>
+                <tr><td>2</td><td class="arabic">فَجَزَاؤُهُ جَهَنَّمُ</td><td class="urdu">پس اس کی جزا جہنم ہے</td></tr>
+                <tr><td>3</td><td class="arabic">فَحُكْمُهُ إِلَى اللَّهِ</td><td class="urdu">پس اس کا فیصلہ اللہ کی طرف ہے</td></tr>
+                <tr><td>4</td><td class="arabic">وَمَأْوَاهُ جَهَنَّمُ</td><td class="urdu">اور اس کا ٹھکانہ جہنم ہے</td></tr>
+                <tr><td>5</td><td class="arabic">وَأَمْرُهُ إِلَى اللَّهِ</td><td class="urdu">اور اس کا معاملہ اللہ کے سپرد ہے</td></tr>
+                <tr><td>6</td><td class="arabic">قَوْلُهُ الْحَقُّ</td><td class="urdu">اس کی بات سچی ہے</td></tr>
+                <tr><td>7</td><td class="arabic">فَالنَّارُ مَوْعِدُهُ</td><td class="urdu">پس آگ اس کا وعدہ گاہ/مقررہ ٹھکانہ ہے</td></tr>
+                <tr><td>8</td><td class="arabic">فَهُوَ جَزَاؤُهُ</td><td class="urdu">پس وہی اس کا بدلہ ہے</td></tr>
+                <tr><td>9</td><td class="arabic">وَامْرَأَتُهُ قَائِمَةٌ</td><td class="urdu">اور اس کی بیوی کھڑی ہوئی تھی</td></tr>
+                <tr><td>10</td><td class="arabic">وَأُمُّهُ صِدِّيقَةٌ</td><td class="urdu">اور اس کی ماں راست باز ہے</td></tr>
+                <tr><td>11</td><td class="arabic">وَكَانَ عَرْشُهُ عَلَى الْمَاءِ</td><td class="urdu">اور اس کا عرش پانی پر تھا</td></tr>
+                <tr><td>12</td><td class="arabic">كَانَ مِقْدَارُهُ أَلْفَ سَنَةٍ</td><td class="urdu">اس کی مقدار ہزار سال تھی</td></tr>
+                <tr><td>13</td><td class="arabic">عِنْدَهُ عِلْمُ السَّاعَةِ</td><td class="urdu">اس کے پاس قیامت کا علم ہے</td></tr>
+                <tr><td>14</td><td class="arabic">وَعِنْدَهُ مَفَاتِحُ الْغَيْبِ</td><td class="urdu">اور اس کے پاس غیب کی کنجیاں ہیں</td></tr>
+                <tr><td>15</td><td class="arabic">وَاللَّهُ وَرَسُولُهُ أَحَقُّ</td><td class="urdu">اور اللہ اور اس کا رسول زیادہ حق دار ہیں</td></tr>
+                <tr><td>16</td><td class="arabic">فَإِنَّ اللَّهَ هُوَ مَوْلَاهُ</td><td class="urdu">پس بیشک اللہ ہی اس کا مددگار ہے</td></tr>
+                <tr><td>17</td><td class="arabic">وَقَلْبُهُ مُطْمَئِنٌّ بِالْإِيمَانِ</td><td class="urdu">اور اس کا دل ایمان پر مطمئن ہے</td></tr>
+                <tr><td>18</td><td class="arabic">سُبْحَانَهُ هُوَ الْغَنِيُّ</td><td class="urdu">پاک ہے وہ، وہی بے نیاز/غنی ہے (اس کے شایان شان تعریف ہے)</td></tr>
+                <tr><td>19</td><td class="arabic">إِنَّمَا اللَّهُ إِلَهٌ وَاحِدٌ سُبْحَانَهُ</td><td class="urdu">اللہ تو بس ایک ہی معبود ہے، وہ پاک ہے</td></tr>
+                <tr><td>20</td><td class="arabic">أَعِنْدَهُ عِلْمُ الْغَيْبِ</td><td class="urdu">کیا اس کے پاس غیب کا علم ہے؟</td></tr>
+                <tr><td>21</td><td class="arabic">كُلُّ شَيْءٍ هَالِكٌ إِلَّا وَجْهَهُ</td><td class="urdu">ہر چیز ہلاک ہونے والی ہے سوائے اس کی ذات کے</td></tr>
+                <tr><td>22</td><td class="arabic">وَاللَّهِ عِنْدَهُ أَجْرٌ عَظِيمٌ</td><td class="urdu">اور اللہ کے پاس بہت بڑا اجر ہے</td></tr>
+                <tr><td>23</td><td class="arabic">إِنَّ اللَّهَ عِنْدَهُ أَجْرٌ عَظِيمٌ</td><td class="urdu">بیشک اللہ کے پاس بڑا اجر ہے</td></tr>
+                <tr><td>24</td><td class="arabic">إِنَّ اللَّهَ عِنْدَهُ عِلْمُ السَّاعَةِ</td><td class="urdu">بیشک اللہ کے پاس قیامت کا علم ہے</td></tr>
+                <tr><td>25</td><td class="arabic">اسْمُهُ أَحْمَدُ</td><td class="urdu">اس کا نام احمد ہے</td></tr>
+                <tr><td>26</td><td class="arabic">اسْمُهُ الْمَسِيحُ عِيسَى ابْنُ مَرْيَمَ</td><td class="urdu">اس کا نام مسیح عیسیٰ ابن مریم ہے</td></tr>
+                <tr><td>27</td><td class="arabic">خِتَامُهُ مِسْكٌ</td><td class="urdu">اس کی مہر مشک پر ہے</td></tr>
+                <tr><td>28</td><td class="arabic">وَمِزَاجُهُ مِنْ تَسْنِيمٍ</td><td class="urdu">اور اس کی آمیزش تسنیم سے ہوگی</td></tr>
+            </tbody>
+        </table>
     </div>
 
-    <!-- ========== LESSON 3 (EXISTING) ========== -->
+    <!-- ================ LESSON 3 (EXISTING) ================ -->
     <div id="unit4_lesson3" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 3 - (فِي بَيْتِهِ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="rule-box"><p><strong>قاعدہ:</strong> حروف جار کے ساتھ <span class="arabic highlight">ـهِ</span>۔</p></div>
-        <div class="ex-item"><span class="arabic">فِي بَيْتِهِ</span> ← اس کے گھر میں</div>
-    </div>
-
-    <!-- ========== LESSON 4 (EXISTING) ========== -->
-    <div id="unit4_lesson4" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 4 - (فِيهِ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="grammar-header-box"><span class="arabic">لَهٗ</span> ← اس کے لیے</div>
-        <div class="ex-item"><span class="arabic">لَهٗ جَنَّةٌ</span> ← اس کے لیے باغ ہے</div>
-    </div>
-
-    <!-- ========== LESSON 5 (EXISTING) ========== -->
-    <div id="unit4_lesson5" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 5 - (أَنْتَ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="grammar-header-box"><span class="arabic">أَنْتَ يُوسُفُ</span> ← تم یوسف ہو۔</div>
-        <div class="ex-item"><span class="arabic">أَنْتَ نَذِيرٌ</span> ← تم ڈرانے والے ہو</div>
-    </div>
-
-    <!-- ========== LESSON 6 (EXISTING) ========== -->
-    <div id="unit4_lesson6" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 6 - (بَيْتُكَ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="grammar-header-box"><span class="arabic">بَيْتُكَ</span> ← تمہارا گھر</div>
-        <div class="ex-item"><span class="arabic">رَبُّكَ</span> ← تیرا رب</div>
-    </div>
-
-    <!-- ========== LESSON 7 (EXISTING) ========== -->
-    <div id="unit4_lesson7" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 7 - (فِي بَيْتِكَ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="grammar-header-box"><span class="arabic">فِي بَيْتِكَ</span> ← تمہارے گھر میں</div>
-        <div class="ex-item"><span class="arabic">مِنْ رَبِّكَ</span> ← تیرے رب سے</div>
-    </div>
-
-    <!-- ========== LESSON 8 (EXISTING) ========== -->
-    <div id="unit4_lesson8" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 8 - (إِلَيْكَ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="ex-item"><span class="arabic">إِلَيْكَ الذِّكْرَ</span> ← تیری طرف ذکر</div>
-        <div class="ex-item"><span class="arabic">عَلَيْكَ حَرَجٌ</span> ← تجھ پر کوئی تنگی نہیں</div>
-        <div class="ex-item"><span class="arabic">إِنَّكَ عَلَى الْحَقِّ</span> ← بیشک تو حق پر ہے</div>
-    </div>
-
-    <!-- ========== LESSON 9 (EXISTING) ========== -->
-    <div id="unit4_lesson9" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 9 - (هِيَ)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="ex-item"><span class="arabic">هِيَ فِتْنَةٌ</span> ← وہ آزمائش ہے</div>
-        <div class="ex-item"><span class="arabic">هِيَ الْعُلْيَا</span> ← وہی بلند ہے</div>
-    </div>
-
-    <!-- ========== LESSON 10 (EXISTING) ========== -->
-    <div id="unit4_lesson10" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 10 - (ـهَا)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="ex-item"><span class="arabic">مِنْ عَذَابِهَا</span> ← اس کے عذاب سے</div>
-        <div class="ex-item"><span class="arabic">عَلَى قَلْبِهَا</span> ← اس کے دل پر</div>
-    </div>
-
-    <!-- ========== LESSON 12 (EXISTING) ========== -->
-    <div id="unit4_lesson12" class="lesson-section">
-        <div class="nav-header"><h2 class="lesson-title">سبق 12 - (فِيهَا)</h2><button class="back-btn" onclick="showMenu()">مینو</button></div>
-        <div class="ex-item"><span class="arabic">فِيهَا خَيْرٌ</span> ← اس میں بھلائی ہے</div>
-        <div class="ex-item"><span class="arabic">لَهَا عَرْشٌ عَظِيمٌ</span> ← اس کے لیے بڑا عرش ہے</div>
+        <div class="nav-header">
+            <h2 class="lesson-title">یونٹ 4 : سبق 3 - حروفِ جار کے ساتھ (ـهِ) کا استعمال</h2>
+            <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+        </div>
+        <div class="rule-box">
+            <p><strong>قاعدہ:</strong> جب کسی اسم کے آخر میں موجود <span class="arabic">ـهُ</span> کے شروع میں حروف جار جیسے (<span class="arabic">مِنْ، فِي، عَلَى، إِلَى، عَنْ</span> وغیرہ) آئیں تو <span class="arabic">ـهُ</span> کی آواز زیر کے ساتھ بدل کر <span class="arabic highlight">ـهِ</span> یا <span class="arabic highlight">ـهٖ</span> ہو جاتی ہے (مثلاً: <span class="arabic">فِي بَيْتِهِ</span> - اس کے گھر میں)۔</p>
+        </div>
+        <h3>حروفِ جار کے ساتھ مثالیں (صفحہ 8)</h3>
+        <table>
+            <thead><tr><th>حرف</th><th>ترکیب</th><th>ترجمہ</th><th>حرف</th><th>ترکیب</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى رَبِّهِ</td><td class="urdu">اس کے رب پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى رَسُولِهِ</td><td class="urdu">اس کے رسول پر</td></tr>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى نَفْسِهِ</td><td class="urdu">اس کی اپنی ذات پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى غَيْبِهِ</td><td class="urdu">اس کے غیب پر</td></tr>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى وَجْهِهِ</td><td class="urdu">اس کے چہرے پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى قَبْرِهِ</td><td class="urdu">اس کی قبر پر</td></tr>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى قَمِيصِهِ</td><td class="urdu">اس کی قمیض پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى عَبْدِهِ</td><td class="urdu">اس کے بندے پر</td></tr>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى أَمْرِهِ</td><td class="urdu">اس کے معاملے پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى بَطْنِهِ</td><td class="urdu">اس کے پیٹ پر</td></tr>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى مَوْتِهِ</td><td class="urdu">اس کی موت پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى كُرْسِيِّهِ</td><td class="urdu">اس کی کرسی پر</td></tr>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى رَجْعِهِ</td><td class="urdu">اس کے لوٹانے پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى ظَهْرِهِ</td><td class="urdu">اس کی پشت پر</td></tr>
+                <tr><td class="arabic">عَلَى</td><td class="arabic">عَلَى بَصَرِهِ</td><td class="urdu">اس کی نظر پر</td><td class="arabic">عَلَى</td><td class="arabic">عَلَى سَمْعِهِ</td><td class="urdu">اس کے کان/سماعت پر</td></tr>
+                <tr><td class="arabic">مِنْ</td><td class="arabic">مِنْ بَيْتِهِ</td><td class="urdu">اس کے گھر سے</td><td class="arabic">مِنْ</td><td class="arabic">مِنْ فَضْلِهِ</td><td class="urdu">اس کے فضل سے</td></tr>
+                <tr><td class="arabic">مِنْ</td><td class="arabic">مِنْ خَشْيَتِهِ</td><td class="urdu">اس کے خوف سے</td><td class="arabic">مِنْ</td><td class="arabic">مِنْ آيَاتِهِ</td><td class="urdu">اس کی نشانیوں میں سے</td></tr>
+                <tr><td class="arabic">مِنْ</td><td class="arabic">مِنْ رَأْسِهِ</td><td class="urdu">اس کے سر سے</td><td class="arabic">مِنْ</td><td class="arabic">مِنْ نَفْعِهِ</td><td class="urdu">اس کے نفع سے</td></tr>
+                <tr><td class="arabic">مِنْ</td><td class="arabic">مِنْ شِيعَتِهِ</td><td class="urdu">اس کے گروہ سے</td><td class="arabic">مِنْ</td><td class="arabic">مِنْ أَهْلِهِ</td><td class="urdu">اس کے گھر والوں میں سے</td></tr>
+                <tr><td class="arabic">مِنْ</td><td class="arabic">مِنْ عَدُوِّهِ</td><td class="urdu">اس کے دشمن سے</td><td class="arabic">مِنْ</td><td class="arabic">مِنْ لِقَائِهِ</td><td class="urdu">اس کی ملاقات سے</td></tr>
+                <tr><td class="arabic">مِنْ</td><td class="arabic">مِنْ ثَمَرِهِ</td><td class="urdu">اس کے پھل سے</td><td class="arabic">مِنْ</td><td class="arabic">مِنْ ذُرِّيَّتِهِ</td><td class="urdu">اس کی اولاد میں سے</td></tr>
+                <tr><td class="arabic">فِي</td><td class="arabic">فِي قَلْبِهِ</td><td class="urdu">اس کے دل میں</td><td class="arabic">فِي</td><td class="arabic">فِي رَبِّهِ</td><td class="urdu">اس کے رب کے بارے میں</td></tr>
+                <tr><td class="arabic">فِي</td><td class="arabic">فِي نَفْسِهِ</td><td class="urdu">اس کے دل/جی میں</td><td class="arabic">فِي</td><td class="arabic">فِي حُكْمِهِ</td><td class="urdu">اس کے حکم میں</td></tr>
+                <tr><td class="arabic">فِي</td><td class="arabic">فِي أَهْلِهِ</td><td class="urdu">اس کے اہل خانہ میں</td><td class="arabic">فِي</td><td class="arabic">فِي زِينَتِهِ</td><td class="urdu">اس کی زینت میں</td></tr>
+                <tr><td class="arabic">فِي</td><td class="arabic">فِي عُنُقِهِ</td><td class="urdu">اس کی گردن میں</td><td class="arabic">فِي</td><td class="arabic">فِي حَرْثِهِ</td><td class="urdu">اس کی کھیتی میں</td></tr>
+                <tr><td class="arabic">إِلَى</td><td class="arabic">إِلَى قَوْمِهِ</td><td class="urdu">اس کی قوم کی طرف</td><td class="arabic">إِلَى</td><td class="arabic">إِلَى أَهْلِهِ</td><td class="urdu">اس کے اہل کی طرف</td></tr>
+                <tr><td class="arabic">إِلَى</td><td class="arabic">إِلَى عَبْدِهِ</td><td class="urdu">اس کے بندے کی طرف</td><td class="arabic">إِلَى</td><td class="arabic">إِلَى أُمِّهِ</td><td class="urdu">اس کی ماں کی طرف</td></tr>
+                <tr><td class="arabic">إِلَى</td><td class="arabic">إِلَى طَعَامِهِ</td><td class="urdu">اس کے کھانے کی طرف</td><td class="arabic">إِلَى</td><td class="arabic">إِلَى ثَمَرِهِ</td><td class="urdu">اس کے پھل کی طرف</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِرَسُولِهِ</td><td class="urdu">اس کے رسول پر/ساتھ</td><td class="arabic">بِـ</td><td class="arabic">بِرَحْمَتِهِ</td><td class="urdu">اس کی رحمت سے</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِنِعْمَتِهِ</td><td class="urdu">اس کی نعمت سے</td><td class="arabic">بِـ</td><td class="arabic">بِنَصْرِهِ</td><td class="urdu">اس کی مدد سے</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِحَمْدِهِ</td><td class="urdu">اس کی حمد کے ساتھ</td><td class="arabic">بِـ</td><td class="arabic">بِأَمْرِهِ</td><td class="urdu">اس کے حکم سے</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِإِذْنِهِ</td><td class="urdu">اس کی اجازت سے</td><td class="arabic">بِـ</td><td class="arabic">بِحُكْمِهِ</td><td class="urdu">اس کے اقتدار/حکم سے</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِيَدِهِ</td><td class="urdu">اس کے ہاتھ میں</td><td class="arabic">بِـ</td><td class="arabic">بِعَهْدِهِ</td><td class="urdu">اس کے عہد سے</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِسِحْرِهِ</td><td class="urdu">اس کے جادو سے</td><td class="arabic">بِـ</td><td class="arabic">بِأَهْلِهِ</td><td class="urdu">اس کے گھر والوں کے ساتھ</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِمِثْلِهِ</td><td class="urdu">اس کی مثال سے</td><td class="arabic">بِـ</td><td class="arabic">بِآيَاتِهِ</td><td class="urdu">اس کی نشانیوں پر</td></tr>
+                <tr><td class="arabic">بِـ</td><td class="arabic">بِيَمِينِهِ</td><td class="urdu">اس کے دائیں ہاتھ میں</td><td class="arabic">بِـ</td><td class="arabic">بِشِمَالِهِ</td><td class="urdu">اس کے بائیں ہاتھ میں</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِرَبِّهِ</td><td class="urdu">اس کے رب کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِرَسُولِهِ</td><td class="urdu">اس کے رسول کے لیے</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِقَوْمِهِ</td><td class="urdu">اس کی قوم کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِصَاحِبِهِ</td><td class="urdu">اس کے ساتھی کے لیے</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِأَبِيهِ</td><td class="urdu">اس کے باپ کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِأُمِّهِ</td><td class="urdu">اس کی ماں کے لیے</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِأَخِيهِ</td><td class="urdu">اس کے بھائی کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِأُخْتِهِ</td><td class="urdu">اس کی بہن کے لیے</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِبَنِيهِ</td><td class="urdu">اس کے بیٹوں کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِامْرَأَتِهِ</td><td class="urdu">اس کی بیوی کے لیے</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِوَلِيِّهِ</td><td class="urdu">اس کے ولی/وارث کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِنُورِهِ</td><td class="urdu">اس کے نور کی طرف</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِحُكْمِهِ</td><td class="urdu">اس کے حکم/فیصلے کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِفَضْلِهِ</td><td class="urdu">اس کے فضل کے لیے</td></tr>
+                <tr><td class="arabic">لِـ</td><td class="arabic">لِنَفْسِهِ</td><td class="urdu">اس کی اپنی ذات کے لیے</td><td class="arabic">لِـ</td><td class="arabic">لِكَلِمَاتِهِ</td><td class="urdu">اس کے کلمات کے لیے</td></tr>
+                <tr><td class="arabic">إِنَّ</td><td class="arabic">إِنَّ رَبَّهُ</td><td class="urdu">بیشک اس کا رب</td><td class="arabic">إِنَّ</td><td class="arabic">إِنَّ فَضْلَهُ</td><td class="urdu">بیشک اس کا فضل</td></tr>
+                <tr><td class="arabic">إِنَّ</td><td class="arabic">إِنَّ أَخْذَهُ</td><td class="urdu">بیشک اس کی پکڑ</td><td class="arabic">إِنَّ</td><td class="arabic">إِنَّ مَفَاتِحَهُ</td><td class="urdu">بیشک اس کی کنجیاں</td></tr>
+            </tbody>
+        </table>
+        <h3>قرآنی آیات و جملے (صفحہ 9 - 10)</h3>
+        <table>
+            <thead><tr><th>نمبر</th><th>قرآنی جملہ</th><th>ترجمہ</th></tr></thead>
+            <tbody>
+                <tr><td>1</td><td class="arabic">فَإِنَّمَا حِسَابُهُ عِنْدَ رَبِّهِ</td><td class="urdu">پس اس کا حساب تو بس اس کے رب کے پاس ہے</td></tr>
+                <tr><td>2</td><td class="arabic">فَهُوَ عَلَى نُورٍ مِنْ رَبِّهِ</td><td class="urdu">پس وہ اپنے رب کی طرف سے نور پر ہے</td></tr>
+                <tr><td>3</td><td class="arabic">فِي قَلْبِهِ مَرَضٌ</td><td class="urdu">اس کے دل میں بیماری ہے</td></tr>
+                <tr><td>4</td><td class="arabic">إِنَّ أَخْذَهُ أَلِيمٌ شَدِيدٌ</td><td class="urdu">بیشک اس کی پکڑ دردناک اور سخت ہے</td></tr>
+                <tr><td>5</td><td class="arabic">وَهُوَ ظَالِمٌ لِنَفْسِهِ</td><td class="urdu">اور وہ اپنی جان پر ظلم کرنے والا ہے</td></tr>
+                <tr><td>6</td><td class="arabic">وَلِلَّهِ الْعِزَّةُ وَلِرَسُولِهِ</td><td class="urdu">اور اللہ ہی کے لیے عزت ہے اور اس کے رسول کے لیے</td></tr>
+                <tr><td>7</td><td class="arabic">كَانَ عَلَى بَيِّنَةٍ مِنْ رَبِّهِ</td><td class="urdu">وہ اپنے رب کی طرف سے روشن دلیل پر تھا</td></tr>
+                <tr><td>8</td><td class="arabic">وَاللَّهُ مُتِمُّ نُورِهِ</td><td class="urdu">اور اللہ اپنے نور کو پورا کرنے والا ہے</td></tr>
+                <tr><td>9</td><td class="arabic">وَهَذَا مِنْ عَدُوِّهِ</td><td class="urdu">اور یہ اس کے دشمن میں سے تھا</td></tr>
+                <tr><td>10</td><td class="arabic">هَذَا مِنْ شِيعَتِهِ</td><td class="urdu">یہ اس کے گروہ میں سے ہے</td></tr>
+                <tr><td>11</td><td class="arabic">فَلِأُمِّهِ الثُّلُثُ</td><td class="urdu">تو اس کی ماں کے لیے تیسرا حصہ ہے</td></tr>
+                <tr><td>12</td><td class="arabic">ضُرُّهُ أَقْرَبُ مِنْ نَفْعِهِ</td><td class="urdu">اس کا نقصان اس کے نفع سے زیادہ قریب ہے</td></tr>
+                <tr><td>13</td><td class="arabic">أَنَّ صَالِحًا مُرْسَلٌ مِنْ رَبِّهِ</td><td class="urdu">بیشک صالح اپنے رب کی طرف سے بھیجے گئے ہیں</td></tr>
+                <tr><td>14</td><td class="arabic">وَالنُّجُومُ مُسَخَّرَاتٌ بِأَمْرِهِ</td><td class="urdu">اور ستارے اس کے حکم سے مسخر ہیں</td></tr>
+                <tr><td>15</td><td class="arabic">لَا مُبَدِّلَ لِكَلِمَاتِهِ</td><td class="urdu">اس کے کلمات کو کوئی بدلنے والا نہیں</td></tr>
+                <tr><td>16</td><td class="arabic">وَإِنَّ مِنْ شِيعَتِهِ لَإِبْرَاهِيمَ</td><td class="urdu">اور بیشک ابراہیم بھی اس کے گروہ میں سے تھے</td></tr>
+                <tr><td>17</td><td class="arabic">بِيَدِهِ الْمُلْكُ</td><td class="urdu">اس کے ہاتھ میں بادشاہت ہے</td></tr>
+                <tr><td>18</td><td class="arabic">بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ</td><td class="urdu">اس کے ہاتھ میں ہر چیز کی بادشاہت ہے</td></tr>
+                <tr><td>19</td><td class="arabic">إِنَّ الْإِنْسَانَ لِرَبِّهِ لَكَنُودٌ</td><td class="urdu">بیشک انسان اپنے رب کا بڑا ناشکرا ہے</td></tr>
+                <tr><td>20</td><td class="arabic">وَكَانَ الشَّيْطَانُ لِرَبِّهِ كَفُورًا</td><td class="urdu">اور شیطان اپنے رب کا بڑا ناشکرا تھا</td></tr>
+                <tr><td>21</td><td class="arabic">وَمِنْ وَرَائِهِ عَذَابٌ غَلِيظٌ</td><td class="urdu">اور اس کے پیچھے سخت عذاب ہے</td></tr>
+                <tr><td>22</td><td class="arabic">وَكَانَ الْكَافِرُ عَلَى رَبِّهِ ظَهِيرًا</td><td class="urdu">اور کافر اپنے رب کے خلاف مددگار ہے</td></tr>
+                <tr><td>23</td><td class="arabic">بَرَاءَةٌ مِنَ اللَّهِ وَرَسُولِهِ</td><td class="urdu">بیزاری کا اعلان ہے اللہ اور اس کے رسول کی طرف سے</td></tr>
+                <tr><td>24</td><td class="arabic">وَأَذَانٌ مِنَ اللَّهِ وَرَسُولِهِ</td><td class="urdu">اور اعلان ہے اللہ اور اس کے رسول کی طرف سے</td></tr>
+                <tr><td>25</td><td class="arabic">بِيَدِهِ الْمُلْكُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</td><td class="urdu">اس کے ہاتھ میں بادشاہت ہے اور وہ ہر چیز پر قادر ہے</td></tr>
+                <tr><td>26</td><td class="arabic">فَسُبْحَانَ الَّذِي بِيَدِهِ مَلَكُوتُ كُلِّ شَيْءٍ</td><td class="urdu">پس پاک ہے وہ ذات جس کے ہاتھ میں ہر چیز کی بادشاہت ہے</td></tr>
+                <tr><td>27</td><td class="arabic">لَا مُبَدِّلَ لِكَلِمَاتِهِ وَهُوَ السَّمِيعُ الْعَلِيمُ</td><td class="urdu">اس کے کلمات کو کوئی بدلنے والا نہیں اور وہی سننے والا جاننے والا ہے</td></tr>
+                <tr><td>28</td><td class="arabic">وَمِنْ آيَاتِهِ خَلْقُ السَّمَاوَاتِ وَالْأَرْضِ</td><td class="urdu">اور اس کی نشانیوں میں سے ہے آسمانوں اور زمین کی پیدائش</td></tr>
+                <tr><td>29</td><td class="arabic">وَمِنْ آيَاتِهِ اللَّيْلُ وَالنَّهَارُ وَالشَّمْسُ وَالْقَمَرُ</td><td class="urdu">اور اس کی نشانیوں میں سے ہیں رات اور دن اور سورج اور چاند</td></tr>
+                <tr><td>30</td><td class="arabic">بَلِ الْإِنْسَانُ عَلَى نَفْسِهِ بَصِيرَةٌ</td><td class="urdu">بلکہ انسان خود اپنے نفس پر گواہ ہے</td></tr>
+                <tr><td>31</td><td class="arabic">هَذَا مِنْ شِيعَتِهِ وَهَذَا مِنْ عَدُوِّهِ</td><td class="urdu">یہ اس کے گروہ میں سے ہے اور یہ اس کے دشمن میں سے ہے</td></tr>
+                <tr><td>32</td><td class="arabic">لَا مُعَقِّبَ لِحُكْمِهِ وَهُوَ سَرِيعُ الْحِسَابِ</td><td class="urdu">اس کے حکم کو کوئی موخر کرنے/روکنے والا نہیں اور وہ جلد حساب لینے والا ہے</td></tr>
+                <tr><td>33</td><td class="arabic">وَالنُّجُومُ مُسَخَّرَاتٌ بِأَمْرِهِ إِنَّ فِي ذَلِكَ لَآيَاتٍ</td><td class="urdu">اور ستارے اس کے حکم سے مسخر ہیں، بیشک اس میں نشانیاں ہیں</td></tr>
+                <tr><td>34</td><td class="arabic">وَأَذَانٌ مِنَ اللَّهِ وَرَسُولِهِ إِلَى النَّاسِ يَوْمَ الْحَجِّ الْأَكْبَرِ أَنَّ اللَّهَ بَرِيءٌ</td><td class="urdu">اور اعلان ہے اللہ اور اس کے رسول کی طرف سے لوگوں کی طرف حجِ اکبر کے دن کہ بیشک اللہ بیزار ہے</td></tr>
+            </tbody>
+        </table>
     </div>
 
     <!-- ========================================================== -->
+    <!-- ================ NEW LESSON 4 (PAGES 11-14) ================ -->
+    <!-- ========================================================== -->
+    <div id="unit4_lesson4" class="lesson-section">
+        <div class="nav-header">
+            <h2 class="lesson-title">یونٹ 4 : سبق 4 - (فِيهِ / مِنْهُ / لَهُ)</h2>
+            <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+        </div>
+
+        <!-- PAGE 11 -->
+        <div class="page-header">
+            <span>یونٹ 4</span>
+            <span class="page-number">11</span>
+            <span>یونٹ 4 | سبق 4</span>
+        </div>
+
+        <div class="grammar-header-box">
+            <span class="arabic">فِيْهِ</span> ← <span class="arabic">فِيْ</span> ← <span class="arabic">مِنْهُ</span> ← <span class="arabic">مِنْ</span> ← <span class="arabic">لَهٗ</span> ← <span class="arabic">لَـ</span>
+            <br>
+            <span>اس میں | میں | اس سے | سے | اس کیلئے | کیلئے</span>
+        </div>
+
+        <p class="explanation">
+            آپ جان چکے ہیں کہ جب کسی نام کے آخر میں (ہٗ/ہٖ) آتا ہے تو اس لفظ کے معنی میں "اس کا" یا "اس کی" کا مفہوم پیدا ہوتا ہے۔ اسی طرح (إِنَّ، أَنَّ، فِي، عَلَى، عَنْ، لَ) کے آخر میں بھی (ہٗ/ہٖ) آتا ہے اور ہر حرف کا مطلب کسی مذکر چیز کی طرف منسوب ہو جاتا ہے، جیسے "لَہٗ" سے "اس کیلئے"۔ درج ذیل ٹیبل میں درج الفاظ اور ان کے آخر میں (ہٗ/ہٖ) کے اضافہ سے نئے بننے والے الفاظ اور ان کے معانی میں ہونے والی تبدیلی نوٹ کریں:
+        </p>
+
+        <table class="grammar-table">
+            <thead>
+                <tr>
+                    <th>لفظ</th>
+                    <th>اس کے آخر میں ہٗ/ہٖ</th>
+                    <th>بننے والا قطعہ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>قَلَمٌ (قلم)</td><td>(قَلَمٌ + هُ)</td><td><span class="arabic">قَلَمُهٗ</span> (اس کا قلم)</td></tr>
+                <tr><td>إِنَّ (بے شک)</td><td>(إِنَّ + هُ)</td><td><span class="arabic">إِنَّهٗ</span> (بے شک وہ)</td></tr>
+                <tr><td>أَنَّ (کہ)</td><td>(أَنَّ + هُ)</td><td><span class="arabic">أَنَّهٗ</span> (کہ وہ)</td></tr>
+                <tr><td>مِنْ (سے)</td><td>(مِنْ + هُ)</td><td><span class="arabic">مِنْهُ</span> (اس سے)</td></tr>
+                <tr><td>لَـ (لئے)</td><td>(لَـ + هُ)</td><td><span class="arabic">لَهٗ</span> (اس کے لیے)</td></tr>
+                <tr><td>إِلَى (کی طرف)</td><td>(إِلَى + هُ)</td><td><span class="arabic">إِلَيْهِ</span> (اس کی طرف)</td></tr>
+                <tr><td>عَلَى (پر)</td><td>(عَلَى + هُ)</td><td><span class="arabic">عَلَيْهِ</span> (اس پر)</td></tr>
+                <tr><td>فِي (میں)</td><td>(فِي + هُ)</td><td><span class="arabic">فِيْهِ</span> (اس میں)</td></tr>
+            </tbody>
+        </table>
+
+        <div class="section-title">قرآنی قطعوں کا ترجمہ</div>
+        <div class="grid-container cols-2">
+            <div class="item"><span class="arabic">لَهٗ جَنَّةٌ</span>: اس کے لیے باغ ہے</div>
+            <div class="item"><span class="arabic">فَلَهٗ أَجْرُهُ</span>: پس اس کے لیے اس کا اجر ہے</div>
+            <div class="item"><span class="arabic">لَهُ الْهُدَى</span>: اس کے لیے ہدایت ہے</div>
+            <div class="item"><span class="arabic">لَهٗ نَفْسُهُ</span>: اس کے لیے اس کی جان ہے</div>
+            <div class="item"><span class="arabic">لَهٗ عَذَابًا عَظِيمًا</span>: اس کے لیے بڑا عذاب ہے</div>
+            <div class="item"><span class="arabic">لَهٗ نُورًا</span>: اس کے لیے نور ہے</div>
+            <div class="item"><span class="arabic">لَهٗ أَهْلُهُ</span>: اس کے لیے اس کے گھر والے ہیں</div>
+            <div class="item"><span class="arabic">لَهٗ مِنَ اللَّهِ</span>: اس کے لیے اللہ کی طرف سے</div>
+            <div class="item"><span class="arabic">لَهٗ أَجْرًا</span>: اس کے لیے اجر ہے</div>
+            <div class="item"><span class="arabic">لَهٗ قَوْمُهُ</span>: اس کے لیے اس کی قوم ہے</div>
+            <div class="item"><span class="arabic">لَهٗ مَالًا</span>: اس کے لیے مال ہے</div>
+            <div class="item"><span class="arabic">لَهٗ ذَلِكَ</span>: اس کے لیے وہ ہے</div>
+            <div class="item"><span class="arabic">وَإِنَّهُ فِي الْآخِرَةِ</span>: اور بے شک وہ آخرت میں ہے</div>
+            <div class="item"><span class="arabic">لَهٗ جَهَنَّمُ</span>: اس کے لیے جہنم ہے</div>
+            <div class="item"><span class="arabic">لَهُ الْحُكْمُ</span>: اس کے لیے حکم ہے</div>
+            <div class="item"><span class="arabic">لَهٗ فِي الْأَرْضِ</span>: اس کے لیے زمین میں ہے</div>
+            <div class="item"><span class="arabic">لَهٗ فِي الْآخِرَةِ</span>: اس کے لیے آخرت میں ہے</div>
+            <div class="item"><span class="arabic">لَهٗ رَبُّهُ</span>: اس کے لیے اس کا رب ہے</div>
+            <div class="item"><span class="arabic">لَهٗ عَزْمًا</span>: اس کے لیے پختہ ارادہ ہے</div>
+            <div class="item"><span class="arabic">لَهُ الدِّينُ</span>: اس کے لیے دین ہے</div>
+            <div class="item"><span class="arabic">لَهٗ رِزْقًا</span>: اس کے لیے رزق ہے</div>
+            <div class="item"><span class="arabic">وَعَدُوٌّ لَّهُ</span>: اور اس کے لیے دشمن ہے</div>
+            <div class="item"><span class="arabic">لَهٗ صَاحِبُهُ</span>: اس کے لیے اس کا ساتھی ہے</div>
+            <div class="item"><span class="arabic">وَلَهُ الْمُلْكُ</span>: اور اس کے لیے بادشاہی ہے</div>
+        </div>
+
+        <!-- PAGE 12 -->
+        <div class="page-header">
+            <span>یونٹ 4</span>
+            <span class="page-number">12</span>
+        </div>
+
+        <div class="grid-container cols-2">
+            <div class="item"><span class="arabic">فَلَهٗ جَزَاءً</span>: پس اس کے لیے بدلہ ہے</div>
+            <div class="item"><span class="arabic">لَهٗ مِنَ الْعَذَابِ</span>: اس کے لیے عذاب میں سے ہے</div>
+            <div class="item"><span class="arabic">مِنْهُ رَحْمَةً</span>: اس کی طرف سے رحمت ہے</div>
+            <div class="item"><span class="arabic">مِنْهُ شَرَابٌ</span>: اس میں سے پینا ہے</div>
+            <div class="item"><span class="arabic">مِنْهُ لَحْمًا</span>: اس میں سے گوشت ہے</div>
+            <div class="item"><span class="arabic">مَغْفِرَةً مِنْهُ وَفَضْلًا</span>: اس کی طرف سے مغفرت اور فضل ہے</div>
+            <div class="item"><span class="arabic">وَمِنْهُ شَجَرٌ</span>: اور اس میں سے درخت ہیں</div>
+            <div class="item"><span class="arabic">مِنْهُ رِزْقًا حَسَنًا</span>: اس کی طرف سے اچھا رزق ہے</div>
+            <div class="item"><span class="arabic">فِي رَحْمَةٍ مِنْهُ</span>: اس کی طرف سے رحمت میں</div>
+            <div class="item"><span class="arabic">مِنْهُ قَلِيلًا</span>: اس میں سے تھوڑا</div>
+            <div class="item"><span class="arabic">فِيهِ خَيْرًا كَثِيرًا</span>: اس میں بہت بھلائی ہے</div>
+            <div class="item"><span class="arabic">فِيهِ اخْتِلَافًا كَثِيرًا</span>: اس میں بہت اختلاف ہے</div>
+            <div class="item"><span class="arabic">فِيهِ مِنْ رُوحِهِ</span>: اس میں اپنی روح میں سے</div>
+            <div class="item"><span class="arabic">قِتَالٌ فِيهِ</span>: اس میں جنگ کرنا ہے</div>
+            <div class="item"><span class="arabic">مِنْهُ شَيْئًا</span>: اس میں سے کچھ بھی</div>
+            <div class="item"><span class="arabic">يَانُوحُ إِنَّهُ لَيْسَ</span>: اے نوح! بے شک وہ نہیں ہے</div>
+            <div class="item"><span class="arabic">إِلَيْهِ الشَّيْطَانُ</span>: اس کی طرف شیطان</div>
+            <div class="item"><span class="arabic">إِلَيْهِ ذَلِكَ</span>: اس کی طرف وہ ہے</div>
+            <div class="item"><span class="arabic">ثُمَّ إِلَيْهِ</span>: پھر اس کی طرف</div>
+            <div class="item"><span class="arabic">إِلَيْهِ مِنْ رَبِّهِ</span>: اس کے رب کی طرف سے اس کی طرف</div>
+            <div class="item"><span class="arabic">فِيهِ مِنَ الْحَقِّ</span>: اس میں حق میں سے ہے</div>
+            <div class="item"><span class="arabic">عَلَيْهِ أَجْرًا</span>: اس پر کوئی اجر ہے</div>
+            <div class="item"><span class="arabic">لَهٗ مُوسَى</span>: اس کے لیے موسیٰ ہے</div>
+            <div class="item"><span class="arabic">مِنْهُ رَحْمَةٌ</span>: اس کی طرف سے رحمت ہے</div>
+            <div class="item"><span class="arabic">خَيْرًا مِنْهُ</span>: اس سے بہتر</div>
+            <div class="item"><span class="arabic">مِنْهُ الأَنْهَارُ</span>: اس میں سے نہریں ہیں</div>
+            <div class="item"><span class="arabic">مِنْهُ الْمَاءُ</span>: اس میں سے پانی ہے</div>
+            <div class="item"><span class="arabic">فِيهِ إِلَى اللَّهِ</span>: اس میں اللہ کی طرف</div>
+            <div class="item"><span class="arabic">وَإِنَّهُ فِي الْآخِرَةِ</span>: اور بے شک وہ آخرت میں ہے</div>
+            <div class="item"><span class="arabic">فِيهِ إِلَى اللَّهِ</span>: اس میں اللہ کی طرف</div>
+            <div class="item"><span class="arabic">إِلَيْهِ فِي يَوْمٍ</span>: اس کی طرف ایک دن میں</div>
+            <div class="item"><span class="arabic">بِهِ قَبْلَ مَوْتِهِ</span>: اس پر اس کی موت سے پہلے</div>
+            <div class="item"><span class="arabic">عَلَيْهِ آيَةٌ مِنْ رَبِّهِ</span>: اس پر اس کے رب کی طرف سے کوئی نشانی</div>
+            <div class="item"><span class="arabic">لَهٗ إِلَى يَوْمِ الْقِيَامَةِ</span>: اس کے لیے قیامت کے دن تک ہے</div>
+            <div class="item"><span class="arabic">لَهٗ الْعَذَابُ يَوْمَ الْقِيَامَةِ</span>: اس کے لیے قیامت کے دن عذاب ہے</div>
+            <div class="item"><span class="arabic">لَهٗ يَوْمَ الْقِيَامَةِ كِتَابًا</span>: اس کے لیے قیامت کے دن ایک کتاب ہے</div>
+            <div class="item"><span class="arabic">لَهٗ شَرِيكٌ فِي الْمُلْكِ</span>: اس کا بادشاہی میں کوئی شریک ہے</div>
+            <div class="item"><span class="arabic">دَرَجَاتٍ مِنْهُ وَمَغْفِرَةً وَرَحْمَةً</span>: اس کی طرف سے درجات، مغفرت اور رحمت ہے</div>
+            <div class="item"><span class="arabic">لَهٗ إِسْحَاقَ وَيَعْقُوبَ</span>: اس کے لیے اسحاق اور یعقوب ہیں</div>
+            <div class="item"><span class="arabic">إِلَى يَوْمِ الْقِيَامَةِ لَا رَيْبَ فِيهِ</span>: قیامت کے دن تک جس میں کوئی شک نہیں</div>
+            <div class="item"><span class="arabic">مِنْهُ حَرَامًا وَحَلَالًا</span>: اس میں سے حرام اور حلال</div>
+        </div>
+
+        <div class="section-title">مکمل قرآنی جملوں اور آیات کا ترجمہ</div>
+        <div class="exercise-list">
+            <div class="ex-item">1. <span class="arabic">لَهُ عَذَابٌ عَظِيمٌ</span> ← اس کے لیے ایک عظیم عذاب ہے۔</div>
+            <div class="ex-item">2. <span class="arabic">فَلَهُ عَذَابٌ أَلِيمٌ</span> ← پس اس کے لیے دردناک عذاب ہے۔</div>
+            <div class="ex-item">3. <span class="arabic">وَلَهُ عَذَابٌ مُهِينٌ</span> ← اور اس کے لیے رسوا کن عذاب ہے۔</div>
+            <div class="ex-item">4. <span class="arabic">وَلَهُ كُلُّ شَيْءٍ</span> ← اور اس کے لیے ہر چیز ہے۔</div>
+            <div class="ex-item">5. <span class="arabic">لَهُ فِي الدُّنْيَا خِزْيٌ</span> ← اس کے لیے دنیا میں رسوائی ہے۔</div>
+            <div class="ex-item">6. <span class="arabic">لا بُرْهَانَ لَهُ</span> ← اس کے لیے کوئی دلیل نہیں ہے۔</div>
+            <div class="ex-item">7. <span class="arabic">لَا شَرِيكَ لَهُ</span> ← اس کا کوئی شریک نہیں ہے۔</div>
+            <div class="ex-item">8. <span class="arabic">فَهُوَ خَيْرٌ لَّهُ</span> ← پس وہ اس کے لیے بہتر ہے۔</div>
+            <div class="ex-item">9. <span class="arabic">فَهُوَ كَفَّارَةٌ لَّهُ</span> ← پس وہ اس کے لیے کفارہ ہے۔</div>
+            <div class="ex-item">10. <span class="arabic">فَلَهُ أَجْرُهُ عِنْدَ رَبِّهِ</span> ← پس اس کے لیے اس کا اجر اس کے رب کے پاس ہے۔</div>
+            <div class="ex-item">11. <span class="arabic">وَلَهُ الْحَمْدُ فِي الْآخِرَةِ</span> ← اور اسی کے لیے آخرت میں تعریف ہے۔</div>
+            <div class="ex-item">12. <span class="arabic">لَهُ دَعْوَةُ الْحَقِّ</span> ← اس کے لیے سچی پکار (دعوت) ہے۔</div>
+            <div class="ex-item">13. <span class="arabic">فَهُوَ لَهُ قَرِينٌ</span> ← پس وہ اس کا ساتھی ہے۔</div>
+            <div class="ex-item">14. <span class="arabic">وَلَهُ أَخٌ أَوْ أُخْتٌ</span> ← اور اس کے لیے بھائی یا بہن ہے۔</div>
+            <div class="ex-item">15. <span class="arabic">قَوْلُهُ الْحَقُّ وَلَهُ الْمُلْكُ</span> ← اس کی بات سچی ہے اور اسی کی بادشاہی ہے۔</div>
+            <div class="ex-item">16. <span class="arabic">وَلَهُ ذُرِّيَّةٌ</span> ← اور اس کے لیے اولاد ہے۔</div>
+        </div>
+
+        <!-- PAGE 13 -->
+        <div class="page-header">
+            <span>یونٹ 4</span>
+            <span class="page-number">13</span>
+        </div>
+
+        <div class="exercise-list">
+            <div class="ex-item">17. <span class="arabic">فِيهِ نَارٌ</span> ← اس میں آگ ہے۔</div>
+            <div class="ex-item">18. <span class="arabic">لَهُ وَلَدٌ</span> ← اس کی اولاد ہے۔</div>
+            <div class="ex-item">19. <span class="arabic">لَهُ نَصِيبٌ</span> ← اس کے لیے حصہ ہے۔</div>
+            <div class="ex-item">20. <span class="arabic">فَلَهُ خَيْرٌ</span> ← پس اس کے لیے بھلائی ہے۔</div>
+            <div class="ex-item">21. <span class="arabic">فَهُوَ خَيْرٌ لَّهُ عِنْدَ رَبِّهِ</span> ← پس وہ اس کے رب کے پاس اس کے لیے بہتر ہے۔</div>
+            <div class="ex-item">22. <span class="arabic">فَلَهُ أَجْرُهُ عِنْدَ رَبِّهِ</span> ← پس اس کے لیے اس کے رب کے پاس اس کا اجر ہے۔</div>
+            <div class="ex-item">23. <span class="arabic">فَلَا هَادِيَ لَهُ</span> ← پس اس کے لیے کوئی ہدایت دینے والا نہیں ہے۔</div>
+            <div class="ex-item">24. <span class="arabic">عَلَيْهِ عَذَابٌ مُقِيمٌ</span> ← اس پر قائم رہنے والا عذاب ہے۔</div>
+            <div class="ex-item">25. <span class="arabic">فَلَهُ الأَسْمَاءُ الْحُسْنَى</span> ← پس اس کے لیے بہترین نام ہیں۔</div>
+            <div class="ex-item">26. <span class="arabic">فَعَلَيْهِ كُفْرُهُ</span> ← پس اس کا کفر اسی پر ہے۔</div>
+            <div class="ex-item">27. <span class="arabic">لَهُ مُلْكُ السَّمَاوَاتِ</span> ← اس کے لیے آسمانوں کی بادشاہی ہے۔</div>
+            <div class="ex-item">28. <span class="arabic">لَهُ الْخَلْقُ وَالأَمْرُ</span> ← اسی کے لیے پیدا کرنا اور حکم دینا ہے۔</div>
+            <div class="ex-item">29. <span class="arabic">لَهُ الْحَمْدُ فِي الْأُولَى وَالْآخِرَةِ</span> ← اسی کے لیے دنیا اور آخرت میں تعریف ہے۔</div>
+            <div class="ex-item">30. <span class="arabic">لَهُ الْمُلْكُ لَا إِلٰهَ إِلَّا هُوَ</span> ← اسی کے لیے بادشاہی ہے، اس کے سوا کوئی معبود نہیں ہے۔</div>
+            <div class="ex-item">31. <span class="arabic">لَيْسَ لَهُ سُلْطَانٌ</span> ← اس کے لیے کوئی دلیل/تسلط نہیں ہے۔</div>
+            <div class="ex-item">32. <span class="arabic">لَيْسَ لَهُ وَلَدٌ وَلَهُ أُخْتٌ</span> ← اس کی کوئی اولاد نہیں اور اس کی ایک بہن ہے۔</div>
+            <div class="ex-item">33. <span class="arabic">فِيهِ الرَّحْمَةُ</span> ← اس میں رحمت ہے۔</div>
+            <div class="ex-item">34. <span class="arabic">فِيهِ سَكِينَةٌ</span> ← اس میں سکون/اطمینان ہے۔</div>
+            <div class="ex-item">35. <span class="arabic">فِيهِ هُدًى وَنُورٌ</span> ← اس میں ہدایت اور نور ہے۔</div>
+            <div class="ex-item">36. <span class="arabic">فِيهِ شِفَاءٌ لِلنَّاسِ</span> ← اس میں لوگوں کے لیے شفا ہے۔</div>
+            <div class="ex-item">37. <span class="arabic">لَا رَيْبَ فِيهِ</span> ← اس میں کوئی شک نہیں ہے۔</div>
+            <div class="ex-item">38. <span class="arabic">فِيهِ عَذَابٌ عَظِيمٌ</span> ← اس میں بڑا عذاب ہے۔</div>
+            <div class="ex-item">39. <span class="arabic">إِنَّهُ قَوِيٌّ</span> ← بے شک وہ طاقتور ہے۔</div>
+            <div class="ex-item">40. <span class="arabic">إِنَّهُ عَلِيٌّ</span> ← بے شک وہ بلند مرتبے والا ہے۔</div>
+            <div class="ex-item">41. <span class="arabic">إِنَّهُ عَلِيمٌ</span> ← بے شک وہ سب کچھ جاننے والا ہے۔</div>
+            <div class="ex-item">42. <span class="arabic">إِنَّهُ عَدُوٌّ مُّضِلٌّ مُّبِينٌ</span> ← بے شک وہ صریح گمراہ کرنے والا دشمن ہے۔</div>
+            <div class="ex-item">43. <span class="arabic">إِنَّهُ مِنْ سُلَيْمَانَ</span> ← بے شک وہ سلیمان کی طرف سے ہے۔</div>
+            <div class="ex-item">44. <span class="arabic">إِنَّهُ كَانَ ظَلُومًا جَهُولًا</span> ← بے شک وہ بڑا ظالم اور نادان تھا۔</div>
+            <div class="ex-item">45. <span class="arabic">أَنَّهُ الْحَقُّ مِنْ رَبِّكَ</span> ← کہ وہی تیرے رب کی طرف سے حق ہے۔</div>
+            <div class="ex-item">46. <span class="arabic">إِنَّهُ بِكُلِّ شَيْءٍ بَصِيرٌ</span> ← بے شک وہ ہر چیز کو دیکھنے والا ہے۔</div>
+            <div class="ex-item">47. <span class="arabic">فَإِنَّ لَهُ جَهَنَّمَ</span> ← پس بے شک اس کے لیے جہنم ہے۔</div>
+            <div class="ex-item">48. <span class="arabic">فَإِنَّ لَهُ نَارَ جَهَنَّمَ</span> ← پس بے شک اس کے لیے جہنم کی آگ ہے۔</div>
+            <div class="ex-item">49. <span class="arabic">فَإِنَّ لَهُ مَعِيشَةً ضَنْكًا</span> ← پس بے شک اس کے لیے تنگ زندگی ہے۔</div>
+            <div class="ex-item">50. <span class="arabic">إِنَّ رَبَّهُ كَانَ بِهِ بَصِيرًا</span> ← بے شک اس کا رب اس کو دیکھ رہا تھا۔</div>
+            <div class="ex-item">51. <span class="arabic">إِنَّهُ كَانَ عَذَابُ يَوْمٍ عَظِيمٍ</span> ← بے شک وہ بڑے دن کا عذاب تھا۔</div>
+            <div class="ex-item">52. <span class="arabic">إِنَّهُ كَانَ فِي أَهْلِهِ مَسْرُورًا</span> ← بے شک وہ اپنے گھر والوں میں خوش رہتا تھا۔</div>
+        </div>
+
+        <div class="section-title">نیز ان قرآنی جملوں کا ترجمہ بھی آپ باآسانی کر سکتے ہیں</div>
+        <div class="exercise-list">
+            <div class="ex-item">53. <span class="arabic">لَهُ غَيْبُ السَّمَاوَاتِ وَالْأَرْضِ</span> ← اسی کے پاس آسمانوں اور زمین کی غیب کی باتیں ہیں۔</div>
+            <div class="ex-item">54. <span class="arabic">لَهُ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ</span> ← اسی کے لیے آسمانوں اور زمین کی بادشاہی ہے۔</div>
+            <div class="ex-item">55. <span class="arabic">لَهُ مَقَالِيدُ السَّمَاوَاتِ وَالْأَرْضِ</span> ← اسی کے پاس آسمانوں اور زمین کی کنجیاں ہیں۔</div>
+            <div class="ex-item">56. <span class="arabic">وَلَهُ الْحَمْدُ فِي السَّمَاوَاتِ وَالْأَرْضِ</span> ← اور اسی کے لیے تعریف ہے آسمانوں اور زمین میں۔</div>
+            <div class="ex-item">57. <span class="arabic">لَهُ الْحَمْدُ فِي الْأُولَى وَالْآخِرَةِ</span> ← اسی کے لیے پہلی (دنیا) اور آخرت میں تعریف ہے۔</div>
+            <div class="ex-item">58. <span class="arabic">وَلَهُ اخْتِلَافُ اللَّيْلِ وَالنَّهَارِ</span> ← اور اسی کے اختیارات میں رات اور دن کا بدلنا ہے۔</div>
+            <div class="ex-item">59. <span class="arabic">وَلَهُ مَنْ فِي السَّمَاوَاتِ وَالْأَرْضِ</span> ← اور اسی کے ہیں جو آسمانوں اور زمین میں ہیں۔</div>
+            <div class="ex-item">60. <span class="arabic">لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ</span> ← اسی کا ہے جو کچھ آسمانوں میں اور جو کچھ زمین میں ہے۔</div>
+            <div class="ex-item">61. <span class="arabic">وَلَهُ الْكِبْرِيَاءُ فِي السَّمَاوَاتِ وَالْأَرْضِ</span> ← اور اسی کے لیے بڑائی ہے آسمانوں اور زمین میں۔</div>
+            <div class="ex-item">62. <span class="arabic">فِيهِ بَأْسٌ شَدِيدٌ وَمَنَافِعُ لِلنَّاسِ</span> ← اس میں سخت طاقت اور لوگوں کے لیے فائدے ہیں۔</div>
+            <div class="ex-item">63. <span class="arabic">وَلَهُ الْمَثَلُ الْأَعْلَى فِي السَّمَاوَاتِ وَالْأَرْضِ</span> ← اور اسی کے لیے آسمانوں اور زمین میں بلند ترین مثال ہے۔</div>
+            <div class="ex-item">64. <span class="arabic">لَا رَيْبَ فِيهِ مِنْ رَبِّ الْعَالَمِينَ</span> ← اس میں کوئی شک نہیں، یہ تمام جہانوں کے رب کی طرف سے ہے۔</div>
+            <div class="ex-item">65. <span class="arabic">لَيْسَ لَهُ دَعْوَةٌ فِي الدُّنْيَا وَلَا فِي الْآخِرَةِ</span> ← اس کے لیے نہ دنیا میں کوئی پکار ہے اور نہ آخرت میں۔</div>
+        </div>
+
+        <!-- PAGE 14 -->
+        <div class="page-header">
+            <span>یونٹ 4</span>
+            <span class="page-number">14</span>
+        </div>
+
+        <div class="exercise-list">
+            <div class="ex-item">66. <span class="arabic">وَلَهُ الْحَمْدُ فِي الْآخِرَةِ وَهُوَ الْحَكِيمُ الْخَبِيرُ</span> ← اور اسی کے لیے آخرت میں تعریف ہے اور وہی حکمت والا باخبر ہے۔</div>
+            <div class="ex-item">67. <span class="arabic">هَذَا مِنْ عَمَلِ الشَّيْطَانِ إِنَّهُ عَدُوٌّ مُّضِلٌّ مُّبِينٌ</span> ← یہ شیطان کے کام سے ہے، بے شک وہ کھلم کھلا گمراہ کرنے والا دشمن ہے۔</div>
+            <div class="ex-item">68. <span class="arabic">هُوَ الْغَنِيُّ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ</span> ← وہی بے نیاز ہے، اسی کا ہے جو کچھ آسمانوں اور زمین میں ہے۔</div>
+            <div class="ex-item">69. <span class="arabic">لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَهُوَ الْعَلِيُّ الْعَظِيمُ</span> ← اسی کا ہے جو کچھ آسمانوں اور زمین میں ہے اور وہی عالی شان اور عظمت والا ہے۔</div>
+            <div class="ex-item">70. <span class="arabic">وَلَهُ الْمَثَلُ الْأَعْلَى فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ</span> ← اور اسی کے لیے آسمانوں اور زمین میں اعلیٰ صفت ہے اور وہی زبردست حکمت والا ہے۔</div>
+            <div class="ex-item">71. <span class="arabic">سُبْحَانَهُ هُوَ الْغَنِيُّ لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ</span> ← وہ پاک ہے، وہی بے نیاز ہے، اسی کا ہے جو کچھ آسمانوں اور زمین میں ہے۔</div>
+            <div class="ex-item">72. <span class="arabic">إِنَّ اللَّهَ عَالِمُ غَيْبِ السَّمَاوَاتِ وَالْأَرْضِ إِنَّهُ عَلِيمٌ بِذَاتِ الصُّدُورِ</span> ← بے شک اللہ آسمانوں اور زمین کے غیب کا علم رکھنے والا ہے، بے شک وہ سینوں کے راز خوب جانتا ہے۔</div>
+            <div class="ex-item">73. <span class="arabic">فَلِلَّهِ الْحَمْدُ رَبِّ السَّمَاوَاتِ وَرَبِّ الْأَرْضِ رَبِّ الْعَالَمِينَ وَلَهُ الْكِبْرِيَاءُ فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ</span> ← پس تمام تعریفیں اللہ ہی کے لیے ہیں جو آسمانوں کا رب اور زمین کا رب، تمام جہانوں کا رب ہے، اور اسی کے لیے آسمانوں اور زمین میں بڑائی ہے اور وہی زبردست حکمت والا ہے۔</div>
+        </div>
+
+        <div class="grammar-rule">
+            جبکہ <strong>(الَّذِي)</strong> کا مطلب ہے (جو/جس) ہے۔ ان آیات کا بھی ترجمہ کریں۔
+        </div>
+
+        <div class="exercise-list">
+            <div class="ex-item">74. <span class="arabic">الَّذِي عِنْدَهُ عِلْمٌ مِنَ الْكِتَابِ</span> ← وہ جس کے پاس کتاب کا علم تھا۔</div>
+            <div class="ex-item">75. <span class="arabic">الَّذِي لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ</span> ← وہ جس کے لیے ہے جو کچھ آسمانوں اور زمین میں ہے۔</div>
+            <div class="ex-item">76. <span class="arabic">الَّذِي لَهُ مُلْكُ السَّمَاوَاتِ وَالْأَرْضِ وَاللَّهُ عَلَى كُلِّ شَيْءٍ شَهِيدٌ</span> ← وہ جس کے لیے آسمانوں اور زمین کی بادشاہی ہے اور اللہ ہر چیز پر گواہ ہے۔</div>
+            <div class="ex-item">77. <span class="arabic">الْحَمْدُ لِلَّهِ الَّذِي لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَلَهُ الْحَمْدُ فِي الْآخِرَةِ وَهُوَ الْحَكِيمُ الْخَبِيرُ</span> ← تمام تعریفیں اللہ کے لیے ہیں جس کا ہے جو کچھ آسمانوں اور زمین میں ہے اور اسی کی تعریف آخرت میں ہے اور وہی حکمت والا باخبر ہے۔</div>
+        </div>
+
+        <div class="grammar-rule">
+            جملے کے آغاز میں <strong>(إِنَّهُ)</strong> اور دوسرے حصے سے پہلے <strong>(لَـ)</strong> کی وجہ سے بننے والی <strong>دوہری تاکید</strong> کا خیال رکھتے ہوئے ان آیات کا ترجمہ کیجیے:
+        </div>
+
+        <div class="grid-container cols-2">
+            <div class="item">78. <span class="arabic">إِنَّهُ لَحَقٌّ</span>: یقیناً وہ برحق ہے</div>
+            <div class="item">79. <span class="arabic">وَإِنَّهُ لَقَسَمٌ</span>: اور یقیناً وہ ایک قسم ہے</div>
+            <div class="item">80. <span class="arabic">إِنَّهُ لَقُرْآنٌ كَرِيمٌ</span>: یقیناً وہ عزت والا قرآن ہے</div>
+            <div class="item">81. <span class="arabic">وَإِنَّهُ لَفِسْقٌ</span>: اور یقیناً وہ گناہ/نافرمانی ہے</div>
+            <div class="item">82. <span class="arabic">إِنَّهُ لَقَوْلٌ فَصْلٌ</span>: یقیناً وہ فیصلہ کن بات ہے</div>
+            <div class="item">83. <span class="arabic">وَإِنَّهُ لَعِلْمٌ لِلَّسَاعَةِ</span>: اور یقیناً وہ قیامت کی ایک نشانی ہے</div>
+            <div class="item">84. <span class="arabic">وَإِنَّهُ عَلَى ذَلِكَ لَشَهِيدٌ</span>: اور یقیناً وہ اس پر گواہ ہے</div>
+            <div class="item">85. <span class="arabic">إِنَّهُ عَلَى رَجْعِهِ لَقَادِرٌ</span>: یقیناً وہ اس کے لوٹانے پر قادر ہے</div>
+            <div class="item">86. <span class="arabic">إِنَّهُ لَذُو حَظٍّ عَظِيمٍ</span>: یقیناً وہ بڑے نصیبے والا ہے</div>
+            <div class="item">87. <span class="arabic">إِنَّهُ لَقَوْلُ رَسُولٍ كَرِيمٍ</span>: یقیناً وہ عزت والے رسول کا قول ہے</div>
+            <div class="item">88. <span class="arabic">وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ</span>: اور یقیناً وہ مال کی محبت میں سخت ہے</div>
+            <div class="item" style="grid-column: span 2;">89. <span class="arabic">إِنَّ الْإِنْسَانَ لِرَبِّهِ لَكَنُودٌ وَإِنَّهُ عَلَى ذَلِكَ لَشَهِيدٌ وَإِنَّهُ لِحُبِّ الْخَيْرِ لَشَدِيدٌ</span>: یقیناً انسان اپنے رب کا بڑا ناشکرا ہے اور یقیناً وہ اس پر گواہ ہے اور یقیناً وہ مال کی محبت میں شدید ہے۔</div>
+        </div>
+
+        <div class="grammar-rule">
+            جبکہ بعض اوقات <strong>إِنَّهُ</strong> کے بعد تاکید کے لیے <strong>هُوَ</strong> کو دوبارہ ذکر کیا جاتا ہے اور پھر <strong>هُوَ</strong> کے بعد والے لفظ میں (الـ) ہونے سے <strong>تاکید کا تیسرا درجہ</strong> بن جاتا ہے۔ اب ان آیات کا ترجمہ خود کریں۔
+        </div>
+
+        <div class="grid-container cols-2">
+            <div class="item">90. <span class="arabic">إِنَّهُ هُوَ الْغَفُورُ الرَّحِيمُ</span>: بے شک اس کی ذات ہی غفور اور رحیم ہے</div>
+            <div class="item">91. <span class="arabic">إِنَّهُ هُوَ التَّوَّابُ الرَّحِيمُ</span>: بے شک وہی بڑا توبہ قبول کرنے والا، رحم کرنے والا ہے</div>
+            <div class="item">92. <span class="arabic">إِنَّهُ هُوَ السَّمِيعُ الْبَصِيرُ</span>: بے شک وہی سب کچھ سننے والا، دیکھنے والا ہے</div>
+            <div class="item">93. <span class="arabic">إِنَّهُ هُوَ السَّمِيعُ الْعَلِيمُ</span>: بے شک وہی سننے والا، جاننے والا ہے</div>
+            <div class="item">94. <span class="arabic">إِنَّهُ هُوَ الْحَكِيمُ الْعَلِيمُ</span>: بے شک وہی حکمت والا، علم والا ہے</div>
+            <div class="item">95. <span class="arabic">إِنَّهُ هُوَ الْعَزِيزُ الْحَكِيمُ</span>: بے شک وہی زبردست، حکمت والا ہے</div>
+            <div class="item">96. <span class="arabic">إِنَّهُ هُوَ الْعَزِيزُ الرَّحِيمُ</span>: بے شک وہی زبردست، رحم کرنے والا ہے</div>
+            <div class="item">97. <span class="arabic">إِنَّهُ هُوَ الْعَلِيمُ الْحَكِيمُ</span>: بے شک وہی علم والا، حکمت والا ہے</div>
+            <div class="item" style="grid-column: span 2;">98. <span class="arabic">لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَإِنَّ اللَّهَ لَهُوَ الْغَنِيُّ الْحَمِيدُ</span>: اسی کا ہے جو کچھ آسمانوں اور زمین میں ہے اور بے شک اللہ ہی بے نیاز، تعریف والا ہے۔</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- ================ NEW LESSON 5 (PAGE 15) =================== -->
+    <!-- ========================================================== -->
+    <div id="unit4_lesson5" class="lesson-section">
+        <div class="nav-header">
+            <h2 class="lesson-title">یونٹ 4 : سبق 5 - (أَنْتَ)</h2>
+            <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+        </div>
+
+        <!-- PAGE 15 -->
+        <div class="page-header">
+            <span>یونٹ 4 | سبق 5</span>
+            <span class="page-number">15</span>
+        </div>
+
+        <div class="grammar-header-box">
+            <span class="arabic">أَنْتَ يُوسُفُ</span> ← <span class="arabic">يُوسُفُ</span>
+            <br>
+            <span>تم یوسف ہو۔ | یوسف</span>
+        </div>
+
+        <p class="explanation">درج ذیل مثالوں پر غور کیجیے:</p>
+
+        <table class="grammar-table">
+            <thead>
+                <tr>
+                    <th>مثال</th>
+                    <th>لفظ</th>
+                    <th>شروع میں أَنْتَ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>مثال 1</td><td><span class="arabic">رَبٌّ</span> (رب)</td><td><span class="arabic">أَنْتَ رَبٌّ</span> (تم رب ہو۔)</td></tr>
+                <tr><td>مثال 2</td><td><span class="arabic">نَذِيرٌ</span> (ڈرانے والا)</td><td><span class="arabic">أَنْتَ نَذِيرٌ</span> (تم ڈرانے والے ہو۔)</td></tr>
+                <tr><td>مثال 3</td><td><span class="arabic">يُوسُفُ</span> (یوسف)</td><td><span class="arabic">أَنْتَ يُوسُفُ</span> (تم یوسف ہو۔)</td></tr>
+            </tbody>
+        </table>
+
+        <p class="explanation">
+            عربی زبان میں <strong>(أَنْتَ)</strong> کا معنی (تم/آپ) ہے اور یہ کسی شخص کو مخاطب کر کے اس کے بارے میں بات کرنے کے لیے استعمال ہوتا ہے۔ ذیل میں آنے والے قرآنی قطعوں میں اس لفظ کا استعمال دیکھیں۔ آنے والے نئے الفاظ کا مطلب سامنے درج ہے۔
+        </p>
+
+        <div class="grid-container cols-2">
+            <div class="item"><span class="arabic">أَنْتَ نَذِيرٌ</span>: تم ڈرانے والے ہو</div>
+            <div class="item"><span class="arabic">أَنْتَ يُوسُفُ</span>: تم یوسف ہو</div>
+            <div class="item"><span class="arabic">أَنْتَ حِلٌّ</span>: تم پڑاؤ کرنے والے ہو</div>
+            <div class="item"><span class="arabic">أَنْتَ مُنْذِرٌ</span>: تم ڈرانے والے ہو</div>
+            <div class="item"><span class="arabic">أَنْتَ مُذَكِّرٌ</span>: تم نصیحت کرنے والے ہو</div>
+            <div class="item"><span class="arabic">أَنْتَ مُفْتَرٍ</span>: تم جھوٹ گھڑنے والے ہو</div>
+        </div>
+
+        <div class="section-title">درج ذیل قرآنی جملوں کا ترجمہ کیجیے</div>
+        <div class="grid-container cols-2">
+            <div class="item"><span class="arabic">إِنَّمَا أَنْتَ نَذِيرٌ</span>: تم تو صرف ڈرانے والے ہو</div>
+            <div class="item"><span class="arabic">إِنَّمَا أَنْتَ مُذَكِّرٌ</span>: تم تو صرف نصیحت کرنے والے ہو</div>
+            <div class="item"><span class="arabic">إِنَّمَا أَنْتَ مُنْذِرٌ</span>: تم تو صرف ڈرانے والے ہو</div>
+            <div class="item"><span class="arabic">وَأَنْتَ حِلٌّ بِهَذَا الْبَلَدِ</span>: اور تم اس شہر میں مقیم ہو</div>
+            <div class="item" style="grid-column: span 2;"><span class="arabic">إِنَّمَا أَنْتَ نَذِيرٌ وَاللَّهُ عَلَى كُلِّ شَيْءٍ وَكِيلٌ</span>: تم تو صرف ڈرانے والے ہو اور اللہ ہر چیز پر کارساز ہے۔</div>
+            <div class="item" style="grid-column: span 2;"><span class="arabic">إِنَّمَا أَنْتَ مُنْذِرٌ وَلِكُلِّ قَوْمٍ هَادٍ</span>: تم تو صرف ڈرانے والے ہو اور ہر قوم کے لیے ہدایت دینے والا ہے۔</div>
+        </div>
+
+        <div class="grammar-rule">
+            اگر <strong>(أَنْتَ)</strong> کے بعد ایسا لفظ ہو جس کے شروع میں الف اور لام ہوں، تو لہجہ کی جگہ تاکید کا مفہوم پیدا ہو جاتا ہے، اس لیے یہاں ترجمہ <strong>(تم ہی، تو ہی)</strong> کیا جائے گا، جیسا کہ پہلی مثال میں واضح کیا جا رہا ہے، بقایا کا ترجمہ خود کریں۔
+        </div>
+
+        <div class="grid-container cols-2">
+            <div class="item"><span class="arabic">أَنْتَ الْعَلِيمُ الْحَكِيمُ</span>: تو ہی علم والا اور حکمت والا ہے</div>
+            <div class="item"><span class="arabic">أَنْتَ السَّمِيعُ الْعَلِيمُ</span>: تو ہی سننے والا اور جاننے والا ہے</div>
+            <div class="item"><span class="arabic">أَنْتَ التَّوَّابُ الرَّحِيمُ</span>: تو ہی توبہ قبول کرنے والا اور رحم کرنے والا ہے</div>
+            <div class="item"><span class="arabic">أَنْتَ الْعَزِيزُ الْحَكِيمُ</span>: تو ہی زبردست اور حکمت والا ہے</div>
+            <div class="item" style="grid-column: span 2;"><span class="arabic">أَنْتَ الْوَهَّابُ</span>: تو ہی عطا کرنے والا ہے</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- ================ NEW LESSON 6 (PAGES 16-18) =============== -->
+    <!-- ========================================================== -->
+    <div id="unit4_lesson6" class="lesson-section">
+        <div class="nav-header">
+            <h2 class="lesson-title">یونٹ 4 : سبق 6 - (بَيْتُكَ)</h2>
+            <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+        </div>
+
+        <!-- PAGE 16 -->
+        <div class="page-header">
+            <span>یونٹ 4 | سبق 6</span>
+            <span class="page-number">16</span>
+        </div>
+
+        <div class="grammar-header-box">
+            <span class="arabic">بَيْتُكَ</span> ← <span class="arabic">بَيْتٌ</span>
+            <br>
+            <span>تمہارا گھر | گھر</span>
+        </div>
+
+        <p class="explanation">درج ذیل مثالوں پر غور کیجیے:</p>
+
+        <table class="grammar-table">
+            <thead>
+                <tr>
+                    <th>مثال</th>
+                    <th>لفظ</th>
+                    <th>آخر میں كَ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>مثال 1</td><td><span class="arabic">بَيْتٌ</span> (گھر)</td><td><span class="arabic">بَيْتُكَ</span> (تمہارا گھر)</td></tr>
+                <tr><td>مثال 2</td><td><span class="arabic">رَبٌّ</span> (رب)</td><td><span class="arabic">رَبُّكَ</span> (تیرا رب)</td></tr>
+                <tr><td>مثال 3</td><td><span class="arabic">رَحْمَةٌ</span> (رحمت)</td><td><span class="arabic">رَحْمَتُكَ</span> (تیری رحمت)</td></tr>
+            </tbody>
+        </table>
+
+        <p class="explanation">
+            ان مثالوں سے واضح ہے کہ عربی زبان میں کسی لفظ کے آخر میں <strong>(كَ)</strong> لگنے سے اس لفظ میں (تیرا) یا (تیری) کا معنی پیدا ہوتا ہے۔ جیسے کِتَابُکَ (تیری کتاب)، قَلَمُکَ (تیرا قلم) وغیرہ۔ درج ذیل الفاظ کا مفہوم سمجھ کر ان کا ترجمہ آپ باآسانی خود کر سکتے ہیں۔
+        </p>
+
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">رَبُّكَ</span>: تیرا رب</div>
+            <div class="item"><span class="arabic">قَوْمُكَ</span>: تیری قوم</div>
+            <div class="item"><span class="arabic">نَفْسُكَ</span>: تیری جان</div>
+            <div class="item"><span class="arabic">أَهْلُكَ</span>: تیرے گھر والے</div>
+            <div class="item"><span class="arabic">قَلْبُكَ</span>: تیرا دل</div>
+            <div class="item"><span class="arabic">صَلَاتُكَ</span>: تیری نماز</div>
+            <div class="item"><span class="arabic">جَنَّتُكَ</span>: تیرا باغ</div>
+            <div class="item"><span class="arabic">ابْنُكَ</span>: تیرا بیٹا</div>
+            <div class="item"><span class="arabic">شَانِئُكَ</span>: تیرا دشمن</div>
+            <div class="item"><span class="arabic">بَيْتُكَ</span>: تیرا گھر</div>
+            <div class="item"><span class="arabic">ذِكْرُكَ</span>: تیرا ذکر</div>
+            <div class="item"><span class="arabic">ذَنْبُكَ</span>: تیرا گناہ</div>
+            <div class="item"><span class="arabic">مَقَامُكَ</span>: تیرا مقام</div>
+            <div class="item"><span class="arabic">رَحْمَتُكَ</span>: تیری رحمت</div>
+            <div class="item"><span class="arabic">ضَلَالُكَ</span>: تیری گمراہی</div>
+            <div class="item"><span class="arabic">صَدْرُكَ</span>: تیرا سینہ</div>
+            <div class="item"><span class="arabic">جَيْبُكَ</span>: تیرا گریبان</div>
+            <div class="item"><span class="arabic">سُبْحَانَكَ</span>: تیری پاکی</div>
+            <div class="item"><span class="arabic">ظَهْرُكَ</span>: تیری پیٹھ/کمر</div>
+            <div class="item"><span class="arabic">يَدُكَ</span>: تیرا ہاتھ</div>
+            <div class="item"><span class="arabic">يَمِينُكَ</span>: تیرا دایاں ہاتھ</div>
+            <div class="item"><span class="arabic">عِنْدَكَ</span>: تیرے پاس</div>
+            <div class="item"><span class="arabic">بَصَرُكَ</span>: تیری نظر</div>
+            <div class="item"><span class="arabic">وَعْدُكَ</span>: تیرا وعدہ</div>
+        </div>
+
+        <div class="section-title">اب آپ ان آیات کو خود سمجھتے ہوئے ان کا ترجمہ کر سکتے ہیں</div>
+        <div class="grid-container cols-2">
+            <div class="item">1. <span class="arabic">وَ رَبُّكَ عَلَى كُلِّ شَيْءٍ حَفِيظٌ</span>: اور تیرا رب ہر چیز پر نگہبان ہے</div>
+            <div class="item">2. <span class="arabic">حَسْبُكَ اللَّهُ</span>: تجھے اللہ کافی ہے</div>
+            <div class="item">3. <span class="arabic">وَكَانَ رَبُّكَ قَدِيرًا</span>: اور تیرا رب قدرت والا ہے</div>
+            <div class="item">4. <span class="arabic">وَكَانَ رَبُّكَ بَصِيرًا</span>: اور تیرا رب دیکھنے والا ہے</div>
+            <div class="item">5. <span class="arabic">فَبَصَرُكَ الْيَوْمَ حَدِيدٌ</span>: پس تیری نظر آج تیز (پتھرائی ہوئی) ہے</div>
+            <div class="item">6. <span class="arabic">وَ رَبُّكَ الْغَفُورُ ذُو الرَّحْمَةِ</span>: اور تیرا رب بخشنے والا، رحمت والا ہے</div>
+            <div class="item">7. <span class="arabic">وَ رَبُّكَ الْغَنِيُّ ذُو الرَّحْمَةِ</span>: اور تیرا رب بے نیاز، رحمت والا ہے</div>
+            <div class="item">8. <span class="arabic">وَ رَبُّكَ أَعْلَمُ بِمَنْ فِي السَّمَاوَاتِ وَالْأَرْضِ</span>: اور تیرا رب ان کو خوب جانتا ہے جو آسمانوں اور زمین میں ہیں</div>
+        </div>
+
+        <!-- PAGE 17 -->
+        <div class="page-header">
+            <span>یونٹ 4 | سبق 7</span>
+            <span class="page-number">17</span>
+        </div>
+
+        <div class="grammar-header-box">
+            <span class="arabic">فِي بَيْتِكَ</span> ← <span class="arabic">بَيْتُكَ</span>
+            <br>
+            <span>تمہارے گھر میں | تمہارا گھر</span>
+        </div>
+
+        <p class="explanation">درج ذیل مثالوں پر غور کریں:</p>
+
+        <table class="grammar-table">
+            <thead>
+                <tr>
+                    <th>مثال</th>
+                    <th>(كَ) والا لفظ</th>
+                    <th>اس کے شروع میں حرف</th>
+                    <th>معنی</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>مثال 1</td><td><span class="arabic">بَيْتُكَ</span> (تیرا گھر)</td><td><span class="arabic">إِلَى بَيْتِكَ</span></td><td>تیرے گھر کی طرف</td></tr>
+                <tr><td>مثال 2</td><td><span class="arabic">رَبُّكَ</span> (تیرا رب)</td><td><span class="arabic">مِنْ رَبِّكَ</span></td><td>تیرے رب سے</td></tr>
+                <tr><td>مثال 3</td><td><span class="arabic">رَحْمَتُكَ</span> (تیری رحمت)</td><td><span class="arabic">فِي رَحْمَتِكَ</span></td><td>تیری رحمت میں</td></tr>
+            </tbody>
+        </table>
+
+        <p class="explanation">
+            آپ جان چکے ہیں کہ اگر کسی لفظ کے آخر میں (كَ) ہو، تو اس میں "تیرا" یا "تیری" کا مفہوم پیدا ہو جاتا ہے۔ ذیل میں ایسے قطعات دیے جا رہے ہیں جن کے آخر میں (كَ) اور شروع میں فِي، مِنْ، إِلَى، إِنَّ وغیرہ میں سے کوئی حرف آ رہا ہے۔ آپ ان حروف کے معانی جان چکے ہیں، لہٰذا ان قطعات کا ترجمہ باآسانی کر سکتے ہیں۔
+        </p>
+
+        <div class="grammar-rule">(كَ) کی طرف منسوب درج ذیل الفاظ کے شروع میں <strong>(مِنْ: سے)</strong> آیا ہے۔ پہلی مثال کی طرح آنے والے تمام قرآنی قطعات کا ترجمہ کیجیے۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">مِنْ رَبِّكَ</span>: تیرے رب سے</div>
+            <div class="item"><span class="arabic">مِنْ بَيْتِكَ</span>: تیرے گھر سے</div>
+            <div class="item"><span class="arabic">مِنْ قَوْمِكَ</span>: تیری قوم سے</div>
+            <div class="item"><span class="arabic">مِنْ جَنَّتِكَ</span>: تیرے باغ سے</div>
+            <div class="item"><span class="arabic">مِنْ أَهْلِكَ</span>: تیرے اہل سے</div>
+            <div class="item"><span class="arabic">مِنْ ذَنْبِكَ</span>: تیرے گناہ سے</div>
+            <div class="item"><span class="arabic">مِنْ حِسَابِكَ</span>: تیرے حساب سے</div>
+            <div class="item"><span class="arabic">مِنْ عِنْدِكَ</span>: تیرے پاس سے</div>
+            <div class="item"><span class="arabic">مِنْ نَفْسِكَ</span>: تیری جان سے</div>
+            <div class="item"><span class="arabic">مِنْ قَرْيَتِكَ</span>: تیری بستی سے</div>
+        </div>
+
+        <div class="grammar-rule">(كَ) کی طرف منسوب درج ذیل الفاظ کے شروع میں <strong>(فِي: میں)</strong> آیا ہے۔ پہلی مثال کی طرح آنے والے تمام قرآنی قطعات کا ترجمہ کیجیے۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">فِي رَحْمَتِكَ</span>: تیری رحمت میں</div>
+            <div class="item"><span class="arabic">فِي صَدْرِكَ</span>: تیرے سینے میں</div>
+            <div class="item"><span class="arabic">فِي ضَلَالِكَ</span>: تیری گمراہی میں</div>
+            <div class="item"><span class="arabic">فِي نَفْسِكَ</span>: تیری جان میں</div>
+            <div class="item"><span class="arabic">فِي مَنَامِكَ</span>: تیرے خواب میں</div>
+            <div class="item"><span class="arabic">فِي يَمِينِكَ</span>: تیرے دائیں ہاتھ میں</div>
+            <div class="item"><span class="arabic">فِي جَيْبِكَ</span>: تیرے گریبان میں</div>
+            <div class="item"><span class="arabic">فِي مَشْيِكَ</span>: تیری چال میں</div>
+        </div>
+
+        <div class="grammar-rule">(كَ) کی طرف منسوب درج ذیل الفاظ کے شروع میں <strong>(إِلَى: کی طرف/تک)</strong> آیا ہے۔ پہلی مثال کی طرح باقی قرآنی قطعات کا ترجمہ کیجیے۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">إِلَى رَبِّكَ</span>: تیرے رب کی طرف</div>
+            <div class="item"><span class="arabic">إِلَى إِلَهِكَ</span>: تیرے معبود کی طرف</div>
+            <div class="item"><span class="arabic">إِلَى أُمِّكَ</span>: تیری ماں کی طرف</div>
+            <div class="item"><span class="arabic">إِلَى طَعَامِكَ</span>: تیرے کھانے کی طرف</div>
+        </div>
+
+        <div class="grammar-rule"><strong>(بِـ)</strong> کا مفہوم سیاق کے مطابق (پر، سے، کو، میں) کیا جا سکتا ہے، جیسے <strong>بِرَبِّكَ</strong>: تیرے رب سے / رب پر کو۔ درج ذیل قطعات کا ترجمہ کریں۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">بِرَحْمَتِكَ</span>: تیری رحمت سے</div>
+            <div class="item"><span class="arabic">بِكُفْرِكَ</span>: تیرے کفر کی وجہ سے</div>
+            <div class="item"><span class="arabic">بِنَفْسِكَ</span>: تیری اپنی ذات سے</div>
+            <div class="item"><span class="arabic">بِصَلَاتِكَ</span>: تیری نماز سے</div>
+            <div class="item"><span class="arabic">بِيَدِكَ</span>: تیرے ہاتھ میں</div>
+            <div class="item"><span class="arabic">بِدُعَائِكَ</span>: تیری پکار سے</div>
+            <div class="item"><span class="arabic">بِيَمِينِكَ</span>: تیرے دائیں ہاتھ سے</div>
+            <div class="item"><span class="arabic">بِسِحْرِكَ</span>: تیرے جادو سے</div>
+        </div>
+
+        <div class="grammar-rule">(كَ) کی طرف منسوب ان الفاظ کے شروع میں <strong>(لَـ: لیے)</strong> آیا ہے۔ ان کا ترجمہ کیجیے۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">لِرَبِّكَ</span>: تیرے رب کے لیے</div>
+            <div class="item"><span class="arabic">لِقَوْمِكَ</span>: تیری قوم کے لیے</div>
+            <div class="item"><span class="arabic">لِذَنْبِكَ</span>: تیرے گناہ کے لیے</div>
+            <div class="item"><span class="arabic">لِزَوْجِكَ</span>: تیری بیوی کے لیے</div>
+        </div>
+
+        <!-- PAGE 18 -->
+        <div class="page-header">
+            <span>یونٹ 4</span>
+            <span class="page-number">18</span>
+        </div>
+
+        <div class="grammar-rule">(كَ) کی طرف منسوب درج ذیل الفاظ کے شروع میں <strong>(عَنْ: کے بارے میں)</strong> آیا ہے۔ ان کا ترجمہ کیجیے۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">عَنْ رَبِّكَ</span>: تیرے رب کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ قَوْمِكَ</span>: تیری قوم کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ قَوْلِكَ</span>: تیرے قول کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ سَبِيلِكَ</span>: تیرے راستے کے بارے میں</div>
+        </div>
+
+        <div class="grammar-rule">(كَ) کی طرف منسوب ان الفاظ کے شروع میں <strong>(عَلَى: پر)</strong> آیا ہے۔ ان کا ترجمہ کیجیے۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">عَلَى قَلْبِكَ</span>: تیرے دل پر</div>
+            <div class="item"><span class="arabic">عَلَى رَبِّكَ</span>: تیرے رب پر</div>
+            <div class="item"><span class="arabic">عَلَى وَالِدَيْكَ</span>: تیرے والدین پر</div>
+        </div>
+
+        <div class="grammar-rule">(كَ) کی طرف منسوب ان الفاظ کے شروع میں <strong>(إِنَّ: بے شک)</strong> آیا ہے۔ پہلی مثال کی طرح باقی قرآنی قطعات کا ترجمہ کیجیے۔</div>
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">إِنَّ رَبَّكَ</span>: بے شک تیرا رب</div>
+            <div class="item"><span class="arabic">إِنَّ صَلَاتَكَ</span>: بے شک تیری نماز</div>
+            <div class="item"><span class="arabic">إِنَّ ابْنَكَ</span>: بے شک تیرا بیٹا</div>
+            <div class="item"><span class="arabic">إِنَّ شَانِئَكَ</span>: بے شک تیرا دشمن</div>
+        </div>
+
+        <div class="section-title">آپ درج ذیل قرآنی قطعات کا مفہوم باآسانی سمجھ سکتے ہیں</div>
+        <div class="grid-container cols-2">
+            <div class="item"><span class="arabic">يَدُكَ فِي جَيْبِكَ</span>: تیرا ہاتھ تیرے گریبان میں</div>
+            <div class="item"><span class="arabic">نَصْرًا مِنْ رَبِّكَ</span>: تیرے رب کی طرف سے مدد</div>
+            <div class="item"><span class="arabic">فَضْلًا مِنْ رَبِّكَ</span>: تیرے رب کی طرف سے فضل</div>
+            <div class="item"><span class="arabic">إِلَى طَعَامِكَ وَشَرَابِكَ</span>: تیرے کھانے اور تیرے پینے کی طرف</div>
+            <div class="item"><span class="arabic">مِنْ رَبِّكَ طُغْيَانًا وَكُفْرًا</span>: تیرے رب کی طرف سے سرکشی اور کفر</div>
+            <div class="item"><span class="arabic">رَحْمَةً مِنْ رَبِّكَ</span>: تیرے رب کی طرف سے رحمت</div>
+            <div class="item"><span class="arabic">طَائِفٌ مِنْ رَبِّكَ</span>: تیرے رب کی طرف سے چکر لگانے والا</div>
+            <div class="item"><span class="arabic">مِنْ رَبِّكَ إِلَى فِرْعَوْنَ</span>: تیرے رب کی طرف سے فرعون کی طرف</div>
+        </div>
+
+        <div class="section-title">گزشتہ اسباق اور اس سبق کی روشنی میں اب آپ ان قرآنی جملوں کا مفہوم خود سمجھ سکتے ہیں</div>
+        <div class="exercise-list">
+            <div class="ex-item">1. <span class="arabic">الْحَقُّ مِنْ رَبِّكَ</span> ← حق تیرے رب کی طرف سے ہے</div>
+            <div class="ex-item">2. <span class="arabic">إِنَّ رَبَّكَ وَاسِعُ الْمَغْفِرَةِ</span> ← بے شک تیرا رب کشادہ مغفرت والا ہے</div>
+            <div class="ex-item">3. <span class="arabic">إِنَّ رَبَّكَ هُوَ أَعْلَمُ</span> ← بے شک تیرا رب ہی سب سے زیادہ جاننے والا ہے</div>
+            <div class="ex-item">4. <span class="arabic">إِنَّ رَبَّكَ لَذُو مَغْفِرَةٍ</span> ← بے شک تیرا رب مغفرت والا ہے</div>
+            <div class="ex-item">5. <span class="arabic">إِنَّ رَبَّكَ لَسَرِيعُ الْعِقَابِ</span> ← بے شک تیرا رب جلد عذاب دینے والا ہے</div>
+            <div class="ex-item">6. <span class="arabic">بِيَدِكَ الْخَيْرُ</span> ← تیرے ہاتھ میں بھلائی ہے</div>
+            <div class="ex-item">7. <span class="arabic">إِنَّ إِلَى رَبِّكَ الرُّجْعَى</span> ← بے شک تیرے رب ہی کی طرف لوٹنا ہے</div>
+            <div class="ex-item">8. <span class="arabic">وَأَنَّ إِلَى رَبِّكَ الْمُنْتَهَى</span> ← اور یہ کہ تیرے رب ہی کے پاس خاتمہ/پہنچنا ہے</div>
+            <div class="ex-item">9. <span class="arabic">إِنَّ رَبَّكَ لَبِالْمِرْصَادِ</span> ← بے شک تیرا رب یقیناً گھات میں ہے</div>
+            <div class="ex-item">10. <span class="arabic">إِنَّ صَلَاتَكَ سَكَنٌ</span> ← بے شک تیری دعا ان کے لیے سکون ہے</div>
+            <div class="ex-item">11. <span class="arabic">وَإِنَّ وَعْدَكَ الْحَقُّ</span> ← اور بے شک تیرا وعدہ سچا ہے</div>
+            <div class="ex-item">12. <span class="arabic">وَإِنَّهُ لَلْحَقُّ مِنْ رَبِّكَ</span> ← اور بے شک وہ تیرے رب کی طرف سے برحق ہے</div>
+            <div class="ex-item">13. <span class="arabic">إِلَى رَبِّكَ مُنْتَهَاهَا</span> ← تیرے رب ہی کی طرف اس کا خاتمہ (علم) ہے</div>
+            <div class="ex-item">14. <span class="arabic">إِنَّ شَانِئَكَ هُوَ الْأَبْتَرُ</span> ← بے شک تیرا دشمن ہی بے نسل/بے نام و نشان ہے</div>
+            <div class="ex-item">15. <span class="arabic">هَذَا هُوَ الْحَقُّ مِنْ عِنْدِكَ</span> ← یہی تیرے پاس سے سچ ہے</div>
+            <div class="ex-item">16. <span class="arabic">هَذِهِ مِنْ عِنْدِكَ</span> ← یہ تیرے پاس سے ہے</div>
+            <div class="ex-item">17. <span class="arabic">إِنَّ رَبَّكَ لَذُو مَغْفِرَةٍ وَذُو عِقَابٍ أَلِيمٍ</span> ← بے شک تیرا رب مغفرت والا اور دردناک عذاب والا ہے</div>
+            <div class="ex-item">18. <span class="arabic">إِنَّ رَبَّكَ لَسَرِيعُ الْعِقَابِ وَإِنَّهُ لَغَفُورٌ رَحِيمٌ</span> ← بے شک تیرا رب جلد عذاب دینے والا ہے اور بے شک وہ بڑا بخشنے والا رحم کرنے والا ہے</div>
+            <div class="ex-item">19. <span class="arabic">يَا نُوحُ إِنَّهُ لَيْسَ مِنْ أَهْلِكَ إِنَّهُ عَمَلٌ غَيْرُ صَالِحٍ</span> ← اے نوح! بے شک وہ تیرے گھر والوں میں سے نہیں ہے، بے شک اس کا عمل ناصالح (برا) ہے</div>
+            <div class="ex-item">20. <span class="arabic">وَالْبَاقِيَاتُ الصَّالِحَاتُ خَيْرٌ عِنْدَ رَبِّكَ</span> ← اور باقی رہنے والی نیکیاں تیرے رب کے پاس بہتر ہیں</div>
+            <div class="ex-item">21. <span class="arabic">وَإِنَّ يَوْمًا عِنْدَ رَبِّكَ كَأَلْفِ سَنَةٍ</span> ← اور بے شک تیرے رب کے پاس ایک دن ہزار سال کی طرح ہے</div>
+        </div>
+    </div>
+
+    <!-- ========================================================== -->
+    <!-- ================ NEW LESSON 7 (PAGE 19) =================== -->
+    <!-- ========================================================== -->
+    <div id="unit4_lesson7" class="lesson-section">
+        <div class="nav-header">
+            <h2 class="lesson-title">یونٹ 4 : سبق 7 - (عَنْ / رَبُّكَ)</h2>
+            <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+        </div>
+
+        <!-- PAGE 19 -->
+        <div class="page-header">
+            <span>یونٹ 4</span>
+            <span class="page-number">19</span>
+        </div>
+
+        <div class="grammar-rule">
+            نیز درج ذیل قرآنی قطعوں میں (كَ) کی طرف منسوب لفظ (رَبُّكَ) کی طرف ایک اور لفظ منسوب ہو گیا ہے، چنانچہ لفظِ رَبُّكَ کے نیچے زیر آ گئی ہے۔ ان الفاظ کو بھی آپ باآسانی سمجھ سکتے ہیں۔
+        </div>
+
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">رِزْقُ رَبِّكَ</span>: تیرے رب کا رزق</div>
+            <div class="item"><span class="arabic">رَحْمَةُ رَبِّكَ</span>: تیرے رب کی رحمت</div>
+            <div class="item"><span class="arabic">حَمْدُ رَبِّكَ</span>: تیرے رب کی حمد</div>
+            <div class="item"><span class="arabic">اسْمُ رَبِّكَ</span>: تیرے رب کا نام</div>
+            <div class="item"><span class="arabic">نِعْمَةُ رَبِّكَ</span>: تیرے رب کی نعمت</div>
+            <div class="item"><span class="arabic">صِرَاطُ رَبِّكَ</span>: تیرے رب کا راستہ</div>
+            <div class="item"><span class="arabic">آيَاتُ رَبِّكَ</span>: تیرے رب کی آیات</div>
+            <div class="item"><span class="arabic">عَرْشُ رَبِّكَ</span>: تیرے رب کا عرش</div>
+            <div class="item"><span class="arabic">بَطْشَ رَبِّكَ</span>: تیرے رب کی پکڑ</div>
+            <div class="item"><span class="arabic">عَطَاءُ رَبِّكَ</span>: تیرے رب کی عطا</div>
+            <div class="item"><span class="arabic">خَرَاجُ رَبِّكَ</span>: تیرے رب کا مال/مالگذاری</div>
+            <div class="item"><span class="arabic">أَمْرُ رَبِّكَ</span>: تیرے رب کا حکم</div>
+        </div>
+
+        <div class="section-title">الحمدللہ، اب درج ذیل آیات کا ترجمہ آپ خود کر سکتے ہیں</div>
+        <div class="exercise-list">
+            <div class="ex-item">1. <span class="arabic">وَهَذَا صِرَاطُ رَبِّكَ</span> ← اور یہ تیرے رب کا سیدھا راستہ ہے</div>
+            <div class="ex-item">2. <span class="arabic">وَ رَحْمَةُ رَبِّكَ خَيْرٌ</span> ← اور تیرے رب کی رحمت بہتر ہے</div>
+            <div class="ex-item">3. <span class="arabic">فَخَرَاجُ رَبِّكَ خَيْرٌ</span> ← پس تیرے رب کا مال/بدلہ ہی بہتر ہے</div>
+            <div class="ex-item">4. <span class="arabic">وَرِزْقُ رَبِّكَ خَيْرٌ وَأَبْقَى</span> ← اور تیرے رب کا رزق بہتر اور زیادہ باقی رہنے والا ہے</div>
+            <div class="ex-item">5. <span class="arabic">إِنَّ بَطْشَ رَبِّكَ لَشَدِيدٌ</span> ← بے شک تیرے رب کی پکڑ یقیناً بہت سخت ہے</div>
+            <div class="ex-item">6. <span class="arabic">إِنَّ عَذَابَ رَبِّكَ كَانَ مَحْذُورًا</span> ← بے شک تیرے رب کا عذاب ڈرنے کے قابل ہے</div>
+            <div class="ex-item">7. <span class="arabic">إِنَّ عَذَابَ رَبِّكَ لَوَاقِعٌ</span> ← بے شک تیرے رب کا عذاب واقع ہونے والا ہے</div>
+            <div class="ex-item">8. <span class="arabic">وَمَا كَانَ عَطَاءُ رَبِّكَ مَحْظُورًا</span> ← اور تیرے رب کی عطا بند نہیں کی گئی ہے/ممنوع نہیں ہے</div>
+        </div>
+
+        <div class="grammar-header-box">
+            <span class="arabic">عَنِ الْآخِرَةِ</span> ← <span class="arabic">الْآخِرَةُ</span>
+            <br>
+            <span>آخرت کے بارے میں | آخرت</span>
+        </div>
+
+        <p class="explanation">
+            <strong>(عَنْ)</strong> کا معنی <strong>"بارے میں"</strong> ہے۔ <strong>(عَنْ)</strong> اور اس سے اگلا لفظ مل کر ایک قطعہ بناتے ہیں لہذا ان دونوں کا مفہوم اکٹھا سمجھا جاتا ہے۔ <strong>(عَنْ)</strong> کے بعد لفظ کے نیچے عموماً زیر ہوتی ہے۔ یہ لفظ بھی قرآن کریم میں کثرت سے ہے۔ درج ذیل قرآنی قطعات کو اب آپ باآسانی سمجھ سکتے ہیں۔
+        </p>
+
+        <div class="grid-container cols-3">
+            <div class="item"><span class="arabic">عَنِ الصَّلَاةِ</span>: نماز کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْآخِرَةِ</span>: آخرت کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْهُدَى</span>: ہدایت کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْفَحْشَاءِ</span>: بے حیائی کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ النَّارِ</span>: آگ (جہنم) کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الذِّكْرِ</span>: ذکر/نصیحت کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ النَّاسِ</span>: لوگوں کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ السَّاعَةِ</span>: قیامت کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الرُّوحِ</span>: روح کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْفَسَادِ</span>: فساد کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ السَّبِيلِ</span>: راستے کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْقَرْيَةِ</span>: بستی کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ النَّعِيمِ</span>: نعمتوں کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ السُّوءِ</span>: برائی کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْخَمْرِ</span>: شراب کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْمَعْرُوفِ</span>: نیکی کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْخَلْقِ</span>: تخلیق کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ اللَّغْوِ</span>: بیہودہ/برے کام کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ التَّذْكِرَةِ</span>: نصیحت کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنِ الْمُنْكَرِ</span>: برائی کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ مُوسَى</span>: موسیٰ کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ هَذَا</span>: اس کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ إِبْرَاهِيمَ</span>: ابراہیم کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ ذَلِكَ</span>: اس کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ سُوءٍ</span>: برائی کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ نَفْسٍ</span>: کسی جان کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ شَيْءٍ</span>: کسی چیز کے بارے میں</div>
+            <div class="item"><span class="arabic">عَنْ بَيِّنَةٍ</span>: واضح دلیل کے بارے میں</div>
+        </div>
+
+        <div class="grammar-rule">
+            <strong>(عَنْ)</strong> کا ایک با محاورہ ترجمہ <strong>"سے"</strong> بھی ہے جیسے <strong>عَنِ الْمُنْكَرِ</strong>: برائی سے۔ سیاق کے مطابق "سے" یا "بارے میں" میں سے کسی ایک کا انتخاب ہوتا ہے۔ درج ذیل تمام قطعات کا دوبارہ ترجمہ کیجیے جس میں <strong>عَنْ</strong> کا ترجمہ <strong>"سے"</strong> کریں۔
+        </div>
+    </div>
+
+    <!-- ================ END OF LESSONS ================ -->
+    <!-- ==================== NEW LESSON 8 ==================== -->
+<div id="unit4_lesson8" class="lesson-section">
+    <div class="nav-header">
+        <h2 class="lesson-title">یونٹ 4 : سبق 8 - (إِلَيْكَ / عَلَيْكَ / لَكَ)</h2>
+        <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+    </div>
+
+    <!-- Page 20 -->
+    <div class="page-header">
+        <span>یونٹ 4</span>
+        <span class="page-number">20</span>
+        <span>یونٹ 4 | سبق 8</span>
+    </div>
+
+    <div class="section-title">قرآنی قطعوں کا ترجمہ</div>
+    <div class="grid-container cols-2">
+        <div class="item"><span class="arabic">إِلَيْكَ الذِّكْرَ</span>: تیری طرف ذکر (نصیحت)</div>
+        <div class="item"><span class="arabic">إِلَيْكَ آيَاتٍ بَيِّنَاتٍ</span>: تیری طرف واضح نشانیاں</div>
+        <div class="item"><span class="arabic">إِلَيْكَ وَحْيُهُ</span>: تیری طرف اس کی وحی</div>
+        <div class="item"><span class="arabic">إِلَيْكَ هَذَا الْقُرْآنَ</span>: تیری طرف یہ قرآن</div>
+        <div class="item"><span class="arabic">إِلَيْكَ مِنْ رَبِّكَ</span>: تیری طرف تیرے رب کی طرف سے</div>
+        <div class="item"><span class="arabic">عَلَيْكَ حَرَجٌ</span>: تجھ پر کوئی تنگی (ہرج)</div>
+        <div class="item"><span class="arabic">وَبَرَكَاتُهُ عَلَيْكَ</span>: اور اس کی برکتیں تجھ پر</div>
+        <div class="item"><span class="arabic">عَلَيْكَ الْقُرْآنَ</span>: تجھ پر قرآن</div>
+        <div class="item"><span class="arabic">لَيْسَ عَلَيْكَ</span>: تجھ پر نہیں ہے</div>
+        <div class="item"><span class="arabic">عَلَيْكَ اللَّعْنَةَ</span>: تجھ پر لعنت</div>
+        <div class="item"><span class="arabic">عَلَيْكَ بِالْحَقِّ</span>: تجھ پر حق کے ساتھ</div>
+        <div class="item"><span class="arabic">عَلَيْكَ كَبِيرًا</span>: تجھ پر بہت بڑا</div>
+        <div class="item"><span class="arabic">عَلَيْكَ حَسِيبًا</span>: تجھ پر حساب لینے والا</div>
+        <div class="item"><span class="arabic">لَكَ نَبَّأْتُ</span>: تیرے لیے میں نے خبر دی</div>
+        <div class="item"><span class="arabic">لَكَ ذِكْرَكَ</span>: تیرے لیے تیرا ذکر</div>
+    </div>
+
+    <!-- Page 21 -->
+    <div class="page-header">
+        <span>یونٹ 4</span>
+        <span class="page-number">21</span>
+    </div>
+
+    <div class="grid-container cols-2">
+        <div class="item"><span class="arabic">لَكَ جَنَّةٌ</span>: تیرے لیے باغ (جنت)</div>
+        <div class="item"><span class="arabic">لَكَ وَلِقَوْمِكَ</span>: تیرے لیے اور تیری قوم کے لیے</div>
+        <div class="item"><span class="arabic">لَكَ صَدْرَكَ</span>: تیرے لیے تیرا سینہ</div>
+        <div class="item"><span class="arabic">لَكَ فِي النَّهَارِ</span>: تیرے لیے دن میں</div>
+        <div class="item"><span class="arabic">لَكَ فِي الْحَيَاةِ</span>: تیرے لیے زندگی میں</div>
+        <div class="item"><span class="arabic">لَكَ مِنَ اللَّهِ</span>: تیرے لیے اللہ کی طرف سے</div>
+        <div class="item"><span class="arabic">لَكَ فَتْحًا مُبِينًا</span>: تیرے لیے واضح فتح</div>
+        <div class="item"><span class="arabic">إِنَّ لَكَ فِي النَّهَارِ</span>: بیشک تیرے لیے دن میں ہے</div>
+        <div class="item"><span class="arabic">لَكَ خَيْرًا مِنْ ذَلِكَ</span>: تیرے لیے اس سے بہتر</div>
+        <div class="item"><span class="arabic">هَلْ لَكَ</span>: کیا تیرے لیے؟</div>
+        <div class="item"><span class="arabic">خَالِصَةً لَكَ</span>: خالص تیرے لیے</div>
+        <div class="item"><span class="arabic">عَنْكَ الْيَهُودُ</span>: تجھ سے یہودی</div>
+        <div class="item"><span class="arabic">جَهَنَّمُ مِنْكَ</span>: جہنم تجھ سے (تیرے ذریعے)</div>
+        <div class="item"><span class="arabic">وَمِنْكَ وَمِنْ نُوحٍ</span>: اور تجھ سے اور نوح سے</div>
+        <div class="item"><span class="arabic">وَآيَةٌ مِنْكَ</span>: اور تیرے پاس سے ایک نشانی</div>
+        <div class="item"><span class="arabic">إِلَيْكَ قُرْآنًا عَرَبِيًّا</span>: تیری طرف عربی قرآن</div>
+        <div class="item"><span class="arabic">إِلَيْكَ مِنْ رَبِّكَ طُغْيَانًا وَكُفْرًا</span>: تیری طرف تیرے رب کی طرف سے سرکشی اور کفر</div>
+        <div class="item"><span class="arabic">إِلَيْكَ مِنْ رَبِّكَ الْحَقُّ</span>: تیری طرف تیرے رب کی طرف سے حق</div>
+        <div class="item"><span class="arabic">إِلَيْكَ رَبُّكَ مِنَ الْحِكْمَةِ</span>: تیری طرف تیرے رب کی طرف سے حکمت</div>
+        <div class="item"><span class="arabic">عَلَيْكَ قَوْلًا ثَقِيلًا</span>: تجھ پر بھاری بات (کلام)</div>
+        <div class="item"><span class="arabic">عَلَيْكَ وَعَلَى وَالِدَتِكَ</span>: تجھ پر اور تیری والدہ پر</div>
+        <div class="item"><span class="arabic">عَلَيْكَ الْكِتَابَ بِالْحَقِّ</span>: تجھ پر حق کے ساتھ کتاب</div>
+        <div class="item"><span class="arabic">عَلَيْكَ وَعَلَى آلِ يَعْقُوبَ</span>: تجھ پر اور آلِ یعقوب پر</div>
+        <div class="item"><span class="arabic">عَلَيْكَ مِنَ الْآيَاتِ</span>: تجھ پر نشانیوں میں سے</div>
+        <div class="item"><span class="arabic">عَلَيْكَ أَحْسَنَ الْقَصَصِ</span>: تجھ پر سب سے اچھا قصہ</div>
+        <div class="item"><span class="arabic">عَلَيْكَ الْكِتَابَ وَالْحِكْمَةَ</span>: تجھ پر کتاب اور حکمت</div>
+        <div class="item"><span class="arabic">عَلَيْكَ كِتَابًا فِي قِرْطَاسٍ</span>: تجھ پر کاغذ میں لکھی کتاب</div>
+        <div class="item"><span class="arabic">فَضْلُ اللَّهِ عَلَيْكَ عَظِيمًا</span>: تجھ پر اللہ کا فضل بہت بڑا ہے</div>
+        <div class="item"><span class="arabic">فَضْلُ اللَّهِ عَلَيْكَ وَرَحْمَتُهُ</span>: تجھ پر اللہ کا فضل اور اس کی رحمت</div>
+        <div class="item"><span class="arabic">فَضْلُ اللَّهِ عَلَيْكَ وَرَحْمَتُهُ</span>: تجھ پر اللہ کا فضل اور اس کی رحمت</div>
+        <div class="item"><span class="arabic">عَلَيْكَ الْكِتَابَ لِلنَّاسِ بِالْحَقِّ</span>: تجھ پر لوگوں کے لیے حق کے ساتھ کتاب</div>
+        <div class="item"><span class="arabic">نِعْمَتَهُ عَلَيْكَ وَعَلَى آلِ يَعْقُوبَ</span>: اس کی نعمت تجھ پر اور آلِ یعقوب پر</div>
+        <div class="item"><span class="arabic">عَلَيْكَ مِنَ الْآيَاتِ وَالذِّكْرِ الْحَكِيمِ</span>: تجھ پر آیات اور حکمت والی نصیحت میں سے</div>
+        <div class="item"><span class="arabic">يَا أَيُّهَا الْإِنْسَانُ إِنَّكَ</span>: اے انسان! بیشک تو</div>
+    </div>
+
+    <div class="section-title">مکمل قرآنی جملوں اور آیات کا ترجمہ</div>
+    <div class="exercise-list">
+        <div class="ex-item">1. <span class="arabic">إِنَّكَ عَلَى الْحَقِّ</span> ← بیشک تو حق پر ہے۔</div>
+        <div class="ex-item">2. <span class="arabic">إِنَّكَ مَيِّتٌ</span> ← بیشک تو فوت ہونے والا (مرنے والا) ہے۔</div>
+        <div class="ex-item">3. <span class="arabic">فَإِنَّكَ رَجِيمٌ</span> ← پس بیشک تو مردود (راندہ ہوا) ہے۔</div>
+        <div class="ex-item">4. <span class="arabic">إِنَّكَ رَءُوفٌ رَحِيمٌ</span> ← بیشک تو نہایت شفقت کرنے والا، رحم کرنے والا ہے۔</div>
+        <div class="ex-item">5. <span class="arabic">إِنَّكَ جَامِعُ النَّاسِ</span> ← بیشک تو لوگوں کو جمع کرنے والا ہے۔</div>
+        <div class="ex-item">6. <span class="arabic">إِنَّكَ سَمِيعُ الدُّعَاءِ</span> ← بیشک تو دعا کا سننے والا ہے۔</div>
+        <div class="ex-item">7. <span class="arabic">إِنَّكَ عَلَى الْحَقِّ الْمُبِينِ</span> ← بیشک تو واضح حق پر ہے۔</div>
+        <div class="ex-item">8. <span class="arabic">وَإِنَّ عَلَيْكَ اللَّعْنَةَ</span> ← اور بیشک تجھ پر لعنت ہے۔</div>
+        <div class="ex-item">9. <span class="arabic">إِنَّكَ عَلَى صِرَاطٍ مُسْتَقِيمٍ</span> ← بیشک تو سیدھے راستے پر ہے۔</div>
+        <div class="ex-item">10. <span class="arabic">إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</span> ← بیشک تو ہر چیز پر قادر ہے۔</div>
+        <div class="ex-item">11. <span class="arabic">فَإِنَّكَ غَفُورٌ رَحِيمٌ</span> ← پس بیشک تو بخشنے والا، رحم کرنے والا ہے۔</div>
+        <div class="ex-item">12. <span class="arabic">فَإِنَّمَا عَلَيْكَ الْبَلَاغُ الْمُبِينُ</span> ← پس بیشک تجھ پر صرف واضح پہنچا دینا ہے۔</div>
+        <div class="ex-item">13. <span class="arabic">أَوْلَى لَكَ</span> ← تیرے لیے تباہی ہے۔</div>
+        <div class="ex-item">14. <span class="arabic">ثُمَّ أَوْلَى لَكَ</span> ← پھر تیرے لیے تباہی ہے۔</div>
+        <div class="ex-item">15. <span class="arabic">أَوْلَى لَكَ فَأَوْلَى</span> ← تیرے لیے تباہی ہے، پس تباہی ہے۔</div>
+        <div class="ex-item">16. <span class="arabic">وَإِلَيْكَ الْمَصِيرُ</span> ← اور تیری ہی طرف لوٹ کر جانا ہے۔</div>
+        <div class="ex-item">17. <span class="arabic">فَسَلَامٌ لَكَ</span> ← پس تیرے لیے سلامتی ہے۔</div>
+        <div class="ex-item">18. <span class="arabic">بَيْنَكَ وَبَيْنَهُ عَدَاوَةٌ</span> ← تیرے اور اس کے درمیان دشمنی ہے۔</div>
+        <div class="ex-item">19. <span class="arabic">سَلَامٌ عَلَيْكَ</span> ← تجھ پر سلام ہو۔</div>
+        <div class="ex-item">20. <span class="arabic">وَإِنَّ عَلَيْكَ اللَّعْنَةَ إِلَى يَوْمِ الدِّينِ</span> ← اور بیشک تجھ پر جزا کے دن (قیامت) تک لعنت ہے۔</div>
+    </div>
+
+    <!-- Page 22 -->
+    <div class="page-header">
+        <span>یونٹ 4</span>
+        <span class="page-number">22</span>
+    </div>
+
+    <div class="section-title">تاکید کے لیے جملے کے شروع میں (إِنَّ) اور دوسرے حصے سے پہلے (لَ) کا خیال رکھتے ہوئے آیات کا ترجمہ</div>
+    <div class="exercise-list">
+        <div class="ex-item">21. <span class="arabic">إِنَّ فَضْلَهُ كَانَ عَلَيْكَ كَبِيرًا</span> ← بیشک اس کا فضل تجھ پر بہت بڑا ہے۔</div>
+        <div class="ex-item">22. <span class="arabic">وَلَلْآخِرَةُ خَيْرٌ لَكَ مِنَ الْأُولَى</span> ← اور یقیناً آخرت تیرے لیے پہلی (دنیا) سے بہتر ہے۔</div>
+        <div class="ex-item">23. <span class="arabic">يَا آدَمُ إِنَّ هَذَا عَدُوٌّ لَكَ وَلِزَوْجِكَ</span> ← اے آدم! بیشک یہ تیرا اور تیری بیوی کا دشمن ہے۔</div>
+        <div class="ex-item">24. <span class="arabic">بِيَدِكَ الْخَيْرُ إِنَّكَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</span> ← تیرے ہی ہاتھ میں بھلائی ہے، بیشک تو ہر چیز پر قادر ہے۔</div>
+        <div class="ex-item">25. <span class="arabic">إِنَّكَ جَامِعُ النَّاسِ لِيَوْمٍ لَا رَيْبَ فِيهِ</span> ← بیشک تو اس دن لوگوں کو جمع کرنے والا ہے جس میں کوئی شک نہیں ہے۔</div>
+        <div class="ex-item">26. <span class="arabic">يَا أَيُّهَا الْإِنْسَانُ إِنَّكَ كَادِحٌ إِلَى رَبِّكَ</span> ← اے انسان! بیشک تو اپنے رب کی طرف مسلسل کوشش اور مشقت کرنے والا ہے۔</div>
+        <div class="ex-item">27. <span class="arabic">أَوْلَى لَكَ فَأَوْلَى ثُمَّ أَوْلَى لَكَ فَأَوْلَى</span> ← تیرے لیے تباہی ہے پس تباہی ہے، پھر تیرے لیے تباہی ہے پس تباہی ہے۔</div>
+        <div class="ex-item">28. <span class="arabic">إِنَّ لَكَ فِي النَّهَارِ سَبْحًا طَوِيلًا</span> ← بیشک تیرے لیے دن میں لمبی فرصت/مشغولیاں ہیں۔</div>
+        <div class="ex-item">29. <span class="arabic">إِنَّكَ لَمَجْنُونٌ</span> ← بیشک تو یقیناً آسیب زدہ (دیوانہ) ہے۔</div>
+        <div class="ex-item">30. <span class="arabic">إِنَّكَ لَمَيِّتٌ</span> ← بیشک تو یقیناً فوت ہونے والا ہے۔</div>
+        <div class="ex-item">31. <span class="arabic">إِنَّكَ لَرَسُولُ اللَّهِ</span> ← بیشک تو یقیناً اللہ کا رسول ہے۔</div>
+        <div class="ex-item">32. <span class="arabic">إِنَّكَ لَعَلَى هُدًى مُسْتَقِيمٍ</span> ← بیشک تو یقیناً سیدھی ہدایت پر ہے۔</div>
+        <div class="ex-item">33. <span class="arabic">وَإِنَّكَ لَعَلَى خُلُقٍ عَظِيمٍ</span> ← اور بیشک تو یقیناً بڑے اخلاق پر ہے۔</div>
+        <div class="ex-item">34. <span class="arabic">إِنَّكَ لَفِي ضَلَالٍ مُبِينٍ</span> ← بیشک تو یقیناً واضح بھٹکنے میں (گمراہی میں) ہے۔</div>
+        <div class="ex-item">35. <span class="arabic">وَإِنَّ لَكَ لَأَجْرًا</span> ← اور بیشک تیرے لیے یقیناً اجر ہے۔</div>
+        <div class="ex-item">36. <span class="arabic">وَإِنَّ لَكَ لَأَجْرًا غَيْرَ مَمْنُونٍ</span> ← اور بیشک تیرے لیے یقیناً نہ ختم ہونے والا اجر ہے۔</div>
+        <div class="ex-item">37. <span class="arabic">وَإِنَّهُ لَذِكْرٌ لَكَ وَلِقَوْمِكَ</span> ← اور بیشک وہ یقیناً تیرے لیے اور تیری قوم کے لیے نصیحت ہے۔</div>
+        <div class="ex-item">38. <span class="arabic">إِنَّكَ لَفِي ضَلَالِكَ الْقَدِيمِ</span> ← بیشک تو یقیناً اپنی پرانی گمراہی/پریشانی میں ہے۔</div>
+    </div>
+
+    <div class="section-title">شروع میں (إِنَّك) پھر (أَنْتَ) اور اس کے بعد والے لفظ میں (الـ) کے ذریعے تاکید کی حامل آیات</div>
+    <div class="exercise-list">
+        <div class="ex-item">39. <span class="arabic">إِنَّكَ أَنْتَ الْأَعْلَى</span> ← بیشک تو ہی سب سے بلند ہے۔</div>
+        <div class="ex-item">40. <span class="arabic">إِنَّكَ أَنْتَ الْوَهَّابُ</span> ← بیشک تو ہی بہت عطا کرنے والا (سب کچھ دینے والا) ہے۔</div>
+        <div class="ex-item">41. <span class="arabic">إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ</span> ← بیشک تو ہی سب کچھ سننے والا، سب کچھ جاننے والا ہے۔</div>
+        <div class="ex-item">42. <span class="arabic">إِنَّكَ أَنْتَ الْعَلِيمُ الْحَكِيمُ</span> ← بیشک تو ہی علم والا، حکمت والا ہے۔</div>
+        <div class="ex-item">43. <span class="arabic">إِنَّكَ أَنْتَ الْعَزِيزُ الْحَكِيمُ</span> ← بیشک تو ہی غالب، حکمت والا ہے۔</div>
+        <div class="ex-item">44. <span class="arabic">إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ</span> ← بیشک تو ہی توبہ قبول کرنے والا، رحم کرنے والا ہے۔</div>
+        <div class="ex-item">45. <span class="arabic">إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ</span> ← بیشک تو ہی غیبوں کو خوب جاننے والا ہے۔</div>
+    </div>
+</div>
+    <!-- ==================== NEW LESSON 9 ==================== -->
+<div id="unit4_lesson9" class="lesson-section">
+    <div class="nav-header">
+        <h2 class="lesson-title">یونٹ 4 : سبق 9 - (هِيَ)</h2>
+        <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+    </div>
+
+    <!-- Page 23 -->
+    <div class="page-header">
+        <span>یونٹ 4 | سبق 9</span>
+        <span class="page-number">23</span>
+    </div>
+
+    <div class="section-title">قرآنی قطعوں کا ترجمہ</div>
+    <div class="grid-container cols-2">
+        <div class="item"><span class="arabic">هيَ فِتْنَةٌ</span>: وہ (مؤنث) آزمائش ہے۔</div>
+        <div class="item"><span class="arabic">هيَ ظَالِمَةٌ</span>: وہ (بستی) ظالم ہے۔</div>
+        <div class="item"><span class="arabic">هيَ أَكْبَرُ</span>: وہ سب سے بڑی ہے۔</div>
+        <div class="item"><span class="arabic">هيَ زَجْرَةٌ</span>: وہ ایک ڈانٹ / چیخ ہے۔</div>
+        <div class="item"><span class="arabic">هيَ بَيْضَاءُ</span>: وہ سفید ہے۔</div>
+        <div class="item"><span class="arabic">هيَ أَشَدُّ</span>: وہ زیادہ سخت ہے۔</div>
+        <div class="item"><span class="arabic">هيَ خَاوِيَةٌ</span>: وہ گری ہوئی۔</div>
+        <div class="item"><span class="arabic">هيَ شَاخِصَةٌ</span>: وہ پتھرائی ہوئی (آنکھیں)۔</div>
+        <div class="item"><span class="arabic">هيَ أَقْوَمُ</span>: وہ زیادہ سیدھی ہے۔</div>
+        <div class="item"><span class="arabic">هيَ حَيَّةٌ</span>: وہ سانپ ہے۔</div>
+        <div class="item"><span class="arabic">هيَ ثُعْبَانٌ</span>: وہ اژدہا ہے۔</div>
+        <div class="item"><span class="arabic">هيَ أَحْسَنُ</span>: وہ زیادہ بہتر ہے۔</div>
+        <div class="item"><span class="arabic">هيَ مَوَاقِيتُ</span>: وہ وقت جاننے کے ذرائع ہیں۔</div>
+        <div class="item"><span class="arabic">هيَ دَارُ الْقَرَارِ</span>: وہی ٹھہرنے کا گھر (آخرت) ہے۔</div>
+        <div class="item"><span class="arabic">وَهيَ ظَالِمَةٌ</span>: اور وہ ظالم ہے۔</div>
+        <div class="item"><span class="arabic">سَلَامٌ هيَ</span>: وہ سلامتی ہے۔</div>
+        <div class="item"><span class="arabic">وَهيَ دُخَانٌ</span>: اور وہ دھواں ہے۔</div>
+        <div class="item"><span class="arabic">بَلْ هيَ فِتْنَةٌ</span>: بلکہ وہ آزمائش ہے۔</div>
+    </div>
+
+    <div class="section-title">درج ذیل قرآنی جملوں کا ترجمہ</div>
+    <div class="exercise-list">
+        <div class="ex-item">1. <span class="arabic">فَإِنَّمَا هيَ زَجْرَةٌ وَاحِدَةٌ</span> ← پس بیشک وہ صرف ایک ہی چیخ/ڈانٹ ہے۔</div>
+        <div class="ex-item">2. <span class="arabic">هيَ مَوَاقِيتُ لِلنَّاسِ وَالْحَجِّ</span> ← وہ لوگوں کے لیے اور حج کے لیے وقت مقرر کرنے کے ذرائع ہیں۔</div>
+        <div class="ex-item">3. <span class="arabic">وَإِنَّ الْآخِرَةَ هيَ دَارُ الْقَرَارِ</span> ← اور بیشک آخرت ہی ٹھہرنے کا گھر ہے۔</div>
+        <div class="ex-item">4. <span class="arabic">سَلَامٌ هيَ حَتَّى مَطْلَعِ الْفَجْرِ</span> ← وہ (رات) سلامتی ہے فجر کے طلوع ہونے تک۔</div>
+    </div>
+
+    <div class="section-title">هيَ کے بعد (الـ) والے الفاظ کی آیات کا ترجمہ</div>
+    <div class="exercise-list">
+        <div class="ex-item">5. <span class="arabic">هيَ الْمَأْوَى</span> ← وہی ٹھکانہ ہے۔</div>
+        <div class="ex-item">6. <span class="arabic">هيَ الْعُلْيَا</span> ← وہی بلند ہے۔</div>
+        <div class="ex-item">7. <span class="arabic">هيَ الْحَيَوَانُ</span> ← وہی اصل زندگی ہے۔</div>
+        <div class="ex-item">8. <span class="arabic">فَإِنَّ الْجَحِيمَ هيَ الْمَأْوَى</span> ← پس بیشک جہنم ہی ٹھکانہ ہے۔</div>
+        <div class="ex-item">9. <span class="arabic">فَإِنَّ الْجَنَّةَ هيَ الْمَأْوَى</span> ← پس بیشک جنت ہی ٹھکانہ ہے۔</div>
+        <div class="ex-item">10. <span class="arabic">وَكَلِمَةُ اللَّهِ هيَ الْعُلْيَا</span> ← اور اللہ کا کلام ہی بلند ترین ہے۔</div>
+        <div class="ex-item">11. <span class="arabic">وَإِنَّ الدَّارَ الْآخِرَةَ لَهيَ الْحَيَوَانُ</span> ← اور بیشک آخرت کا گھر ہی یقیناً اصل زندگی ہے۔</div>
+    </div>
+</div>
+    <!-- ==================== NEW LESSON 10 ==================== -->
+<div id="unit4_lesson10" class="lesson-section">
+    <div class="nav-header">
+        <h2 class="lesson-title">یونٹ 4 : سبق 10 - (ـهَا)</h2>
+        <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+    </div>
+
+    <!-- Page 24 -->
+    <div class="page-header">
+        <span>یونٹ 4 | سبق 10</span>
+        <span class="page-number">24</span>
+    </div>
+
+    <div class="section-title">قرآنی قطعوں کا ترجمہ</div>
+    <div class="grid-container cols-2">
+        <div class="item"><span class="arabic">مِنْ عَذَابِهَا</span>: اس (مؤنث) کے عذاب سے</div>
+        <div class="item"><span class="arabic">مِنْ أَبْوَابِهَا</span>: اس کے دروازوں سے</div>
+        <div class="item"><span class="arabic">مِنْ بَعْدِهَا</span>: اس کے بعد</div>
+        <div class="item"><span class="arabic">مِنْ أَهْلِهَا</span>: اس کے گھر والوں سے</div>
+        <div class="item"><span class="arabic">مِنْ قَوْلِهَا</span>: اس کی بات سے</div>
+        <div class="item"><span class="arabic">مِنْ أَطْرَافِهَا</span>: اس کے کناروں سے</div>
+        <div class="item"><span class="arabic">فِي إِيمَانِهَا</span>: اس کے ایمان میں</div>
+        <div class="item"><span class="arabic">فِي بَيْتِهَا</span>: اس کے گھر میں</div>
+        <div class="item"><span class="arabic">فِي جِيدِهَا</span>: اس کی گردن میں</div>
+        <div class="item"><span class="arabic">فِي زَوْجٍ</span>: جوڑے میں</div>
+        <div class="item"><span class="arabic">فِي خَرَابِهَا</span>: اس کی ویرانی میں</div>
+        <div class="item"><span class="arabic">فِي مَنَامِهَا</span>: اس کی نیند میں</div>
+        <div class="item"><span class="arabic">فِي نُسْخَتِهَا</span>: اس کی تحریر/نسخے میں</div>
+        <div class="item"><span class="arabic">إِلَى كِتَابِهَا</span>: اس کی کتاب کی طرف</div>
+        <div class="item"><span class="arabic">إِلَى رَبِّهَا</span>: اس کے رب کی طرف</div>
+        <div class="item"><span class="arabic">إِلَى أَهْلِهَا</span>: اس کے گھر والوں کی طرف</div>
+        <div class="item"><span class="arabic">بِعَرْشِهَا</span>: اس کے عرش پر</div>
+        <div class="item"><span class="arabic">بِوَلَدِهَا</span>: اس کے بچے سے</div>
+        <div class="item"><span class="arabic">بِنَاصِيَتِهَا</span>: اس کی پیشانی پر</div>
+        <div class="item"><span class="arabic">بِمِثْلِهَا</span>: اس کی مثل سے</div>
+        <div class="item"><span class="arabic">إِنَّ عَذَابَهَا</span>: بیشک اس کا عذاب</div>
+        <div class="item"><span class="arabic">إِنَّ أَهْلَهَا</span>: بیشک اس کے گھر والے</div>
+    </div>
+
+    <!-- Page 25 -->
+    <div class="page-header">
+        <span>یونٹ 4</span>
+        <span class="page-number">25</span>
+    </div>
+
+    <div class="section-title">(ها) کی طرف منسوب قرآنی قطعوں کا ترجمہ</div>
+    <div class="grid-container cols-2">
+        <div class="item"><span class="arabic">لِرَبِّهَا</span>: اس کے رب کے لیے</div>
+        <div class="item"><span class="arabic">لِوَقْتِهَا</span>: اس کے واقع ہونے کے وقت کے لیے</div>
+        <div class="item"><span class="arabic">لِسَعْيِهَا</span>: اس کی کوشش کے لیے</div>
+        <div class="item"><span class="arabic">بَعْدَ مَوْتِهَا</span>: اس کی موت کے بعد</div>
+        <div class="item"><span class="arabic">بَعْدَ إِصْلَاحِهَا</span>: اس کی اصلاح کے بعد</div>
+        <div class="item"><span class="arabic">بَعْدَ ثُبُوتِهَا</span>: اس کے پختہ ہونے کے بعد</div>
+        <div class="item"><span class="arabic">قَبْلَ غُرُوبِهَا</span>: اس (سورج) کے غروب ہونے سے پہلے</div>
+        <div class="item"><span class="arabic">عَلَى قَلْبِهَا</span>: اس کے دل پر</div>
+        <div class="item"><span class="arabic">عَلَى وَجْهِهَا</span>: اس کے چہرے پر</div>
+        <div class="item"><span class="arabic">عَلَى ظَهْرِهَا</span>: اس کی پیٹھ پر</div>
+        <div class="item"><span class="arabic">عَلَى أَهْلِهَا</span>: اس کے گھر والوں پر</div>
+        <div class="item"><span class="arabic">عَلَى عُرُوشِهَا</span>: اس کی چھتوں پر</div>
+        <div class="item"><span class="arabic">عَلَى أُصُولِهَا</span>: اس کی جڑوں پر</div>
+        <div class="item"><span class="arabic">شَاهِدٌ مِنْ أَهْلِهَا</span>: اس کے گھر والوں میں سے ایک گواہ</div>
+        <div class="item"><span class="arabic">فِي الْأَرْضِ بَعْدَ إِصْلَاحِهَا</span>: زمین میں اس کی اصلاح کے بعد</div>
+        <div class="item"><span class="arabic">قَبْلَ طُلُوعِ الشَّمْسِ وَقَبْلَ غُرُوبِهَا</span>: سورج نکلنے سے پہلے اور اس کے غروب ہونے سے پہلے</div>
+    </div>
+
+    <div class="section-title">قرآنی جملوں کا ترجمہ</div>
+    <div class="exercise-list">
+        <div class="ex-item">1. <span class="arabic">هُوَ فِي بَيْتِهَا</span> ← وہ اس کے گھر میں ہے۔</div>
+        <div class="ex-item">2. <span class="arabic">إِلَى رَبِّهَا نَاظِرَةٌ</span> ← اپنے رب کی طرف دیکھنے والی (آنکھیں) ہوں گی۔</div>
+        <div class="ex-item">3. <span class="arabic">هُوَ آخِذٌ بِنَاصِيَتِهَا</span> ← وہ اس کی پیشانی کو تھامنے والا ہے۔</div>
+        <div class="ex-item">4. <span class="arabic">إِنَّ عَذَابَهَا كَانَ غَرَامًا</span> ← بیشک اس کا عذاب نہ ختم ہونے والا (ہمیشہ رہنے والا) ہے۔</div>
+        <div class="ex-item">5. <span class="arabic">هيَ أَكْبَرُ مِنْ أُخْتِهَا</span> ← وہ (نشانی) اپنی دوسری (نشانی) سے بڑی ہے۔</div>
+        <div class="ex-item">6. <span class="arabic">وَفِي نُسْخَتِهَا هُدًى وَرَحْمَةٌ</span> ← اور اس کی تحریر میں ہدایت اور رحمت ہے۔</div>
+        <div class="ex-item">7. <span class="arabic">فَهيَ خَاوِيَةٌ عَلَى عُرُوشِهَا</span> ← پس وہ اپنی چھتوں کے بل گری ہوئی ہے۔</div>
+        <div class="ex-item">8. <span class="arabic">وَهيَ خَاوِيَةٌ عَلَى عُرُوشِهَا</span> ← اور وہ اپنی چھتوں کے بل گری ہوئی ہے۔</div>
+        <div class="ex-item">9. <span class="arabic">لَيْسَ لِوَقْعَتِهَا كَاذِبَةٌ</span> ← اس کے واقع ہونے کو کوئی جھٹلانے والا نہیں۔</div>
+        <div class="ex-item">10. <span class="arabic">فِي جِيدِهَا حَبْلٌ مِنْ مَسَدٍ</span> ← اس کی گردن میں کھجور کی چھال کی رسی ہوگی۔</div>
+        <div class="ex-item">11. <span class="arabic">وَهيَ ظَالِمَةٌ فَهيَ خَاوِيَةٌ عَلَى عُرُوشِهَا</span> ← اور وہ ظالم تھی، پس وہ اپنی چھتوں کے بل گر پڑی۔</div>
+        <div class="ex-item">12. <span class="arabic">لِسَعْيِهَا رَاضِيَةٌ فِي جَنَّةٍ عَالِيَةٍ</span> ← وہ اپنی کوشش پر خوش ہوگی، ایک بلند جنت میں۔</div>
+        <div class="ex-item">13. <span class="arabic">وَامْرَأَتُهُ حَمَّالَةَ الْحَطَبِ فِي جِيدِهَا حَبْلٌ مِنْ مَسَدٍ</span> ← اور اس کی بیوی ایندھن اٹھانے والی، اس کی گردن میں کھجور کی چھال کی رسی ہوگی۔</div>
+    </div>
+</div>
+    <!-- ==================== NEW LESSON 12 ==================== -->
+<div id="unit4_lesson12" class="lesson-section">
+    <div class="nav-header">
+        <h2 class="lesson-title">یونٹ 4 : سبق 12 - (فِيهَا / عَلَيْهَا / مِنْهَا / لَهَا)</h2>
+        <button class="back-btn" onclick="showMenu()">اصلی مینو</button>
+    </div>
+
+    <!-- Page 26 -->
+    <div class="page-header">
+        <span>یونٹ 4 | سبق 12</span>
+        <span class="page-number">26</span>
+    </div>
+
+    <div class="section-title">قرآنی قطعوں کا ترجمہ</div>
+    <div class="grid-container cols-2">
+        <div class="item"><span class="arabic">فِيهَا الْفَسَادَ</span>: اس میں فساد</div>
+        <div class="item"><span class="arabic">فِيهَا الْمَوْتَ</span>: اس میں موت</div>
+        <div class="item"><span class="arabic">فِيهَا الْقِتَالُ</span>: اس میں قتال (جنگ)</div>
+        <div class="item"><span class="arabic">فِيهَا بِغَيْرِ حِسَابٍ</span>: اس میں بغیر حساب کے</div>
+        <div class="item"><span class="arabic">فِيهَا آيَةً</span>: اس میں ایک نشانی</div>
+        <div class="item"><span class="arabic">فِيهَا جِدَارًا</span>: اس میں ایک دیوار</div>
+        <div class="item"><span class="arabic">فِيهَا حُسْنًا</span>: اس میں اچھا / خوبصورتی</div>
+        <div class="item"><span class="arabic">عَلَيْهَا حِجَارَةً</span>: اس پر پتھر</div>
+        <div class="item"><span class="arabic">عَلَيْهَا الْمَاءَ</span>: اس پر پانی</div>
+        <div class="item"><span class="arabic">عَلَيْهَا الْمَوْتُ</span>: اس پر موت</div>
+        <div class="item"><span class="arabic">مِنْهَا أَهْلَهَا</span>: اس میں سے اس کے گھر والے</div>
+        <div class="item"><span class="arabic">وَالرُّوحُ فِيهَا</span>: اور اس میں روح</div>
+        <div class="item"><span class="arabic">مِنْهَا جَمِيعًا</span>: اس میں سے سب کے سب</div>
+        <div class="item"><span class="arabic">مِنْهَا زَوْجَهَا</span>: اس میں سے اس کا جوڑا</div>
+        <div class="item"><span class="arabic">مِنْهَا آيَةٌ بَيِّنَةٌ</span>: اس میں سے ایک واضح نشانی</div>
+        <div class="item"><span class="arabic">مِنْهَا فِي شَكٍّ</span>: اس میں سے شک میں</div>
+        <div class="item"><span class="arabic">أَحْسَنُ مِنْهَا</span>: اس سے زیادہ بہتر</div>
+        <div class="item"><span class="arabic">مِنْهَا شَفَاعَةً</span>: اس میں سے سفارش</div>
+    </div>
+
+    <!-- Page 27 -->
+    <div class="page-header">
+        <span>یونٹ 4</span>
+        <span class="page-number">27</span>
+    </div>
+
+    <div class="grid-container cols-2">
+        <div class="item"><span class="arabic">إِنَّ فِيهَا قَوْمًا</span>: بیشک اس میں لوگ ہیں</div>
+        <div class="item"><span class="arabic">خَيْرٌ مِنْهَا</span>: اس سے بہتر</div>
+        <div class="item"><span class="arabic">اسْمُ اللَّهِ عَلَيْهَا</span>: اس پر اللہ کا نام</div>
+        <div class="item"><span class="arabic">لَهَا عَرْشٌ</span>: اس کے لیے ایک عرش ہے</div>
+        <div class="item"><span class="arabic">لَهَا الْعَذَابُ</span>: اس کے لیے عذاب ہے</div>
+        <div class="item"><span class="arabic">سَيِّئَةً مِثْلَهَا</span>: اس جیسی برائی</div>
+        <div class="item"><span class="arabic">فِيهَا أَبَدًا</span>: اس میں ہمیشہ</div>
+        <div class="item"><span class="arabic">لَهَا وَلِلْأَرْضِ</span>: اس کے لیے اور زمین کے لیے</div>
+        <div class="item"><span class="arabic">فِي شَكٍّ مِنْهَا</span>: اس کے بارے میں شک میں</div>
+        <div class="item"><span class="arabic">كُلٌّ فِيهَا</span>: ہر ایک اس میں</div>
+        <div class="item"><span class="arabic">نَصِيبٌ مِنْهَا</span>: اس میں سے ایک حصہ</div>
+        <div class="item"><span class="arabic">لَهَا رِزْقًا كَرِيمًا</span>: اس کے لیے عزت والا رزق</div>
+        <div class="item"><span class="arabic">فِيهَا آيَاتٌ بَيِّنَاتٌ</span>: اس میں واضح نشانیاں ہیں</div>
+        <div class="item"><span class="arabic">عَلَيْهَا فِي نَارِ جَهَنَّمَ</span>: اس پر جہنم کی آگ میں</div>
+        <div class="item"><span class="arabic">مِثْلَهَا فِي الْبِلَادِ</span>: شہروں میں اس کی مانند</div>
+        <div class="item"><span class="arabic">فِيهَا مِنْ كُلِّ الثَّمَرَاتِ</span>: اس میں ہر قسم کے پھل</div>
+        <div class="item"><span class="arabic">فِيهَا شَمْسًا وَلَا زَمْهَرِيرًا</span>: اس میں نہ سخت دھوپ اور نہ سخت سردی</div>
+        <div class="item"><span class="arabic">وَعَلَيْهَا وَعَلَى الْفُلْكِ</span>: اور اس پر اور کشتیوں پر</div>
+        <div class="item"><span class="arabic">مِنْهَا وَمِنْ كُلِّ كَرْبٍ</span>: اس سے اور ہر تکلیف سے</div>
+        <div class="item"><span class="arabic">فِيهَا تَحِيَّةً وَسَلَامًا</span>: اس میں دعا اور سلام</div>
+        <div class="item"><span class="arabic">عَلَيْهَا حُسْبَانًا مِنَ السَّمَاءِ</span>: اس پر آسمان سے عذاب</div>
+        <div class="item"><span class="arabic">الْمَلَائِكَةُ وَالرُّوحُ فِيهَا</span>: فرشتے اور روح (جبرائیل) اس میں</div>
+        <div class="item"><span class="arabic">مِنْهَا مَاءَهَا وَمَرْعَاهَا</span>: اس میں سے اس کا پانی اور اس کا چارہ</div>
+    </div>
+
+    <div class="section-title">مکمل قرآنی جملوں اور آیات کا ترجمہ</div>
+    <div class="exercise-list">
+        <div class="ex-item">1. <span class="arabic">فِيهَا خَيْرٌ</span> ← اس میں بھلائی ہے۔</div>
+        <div class="ex-item">2. <span class="arabic">فِيهَا سَلَامٌ</span> ← اس میں سلامتی ہے۔</div>
+        <div class="ex-item">3. <span class="arabic">فِيهَا الْقِتَالُ</span> ← اس میں جنگ (قتال) ہے۔</div>
+        <div class="ex-item">4. <span class="arabic">فِيهَا مَتَاعٌ</span> ← اس میں فائدہ/سامان ہے۔</div>
+        <div class="ex-item">5. <span class="arabic">فِيهَا مِصْبَاحٌ</span> ← اس میں ایک چراغ ہے۔</div>
+        <div class="ex-item">6. <span class="arabic">فِيهَا فَوْجٌ</span> ← اس میں ایک گروہ (فوج) ہے۔</div>
+        <div class="ex-item">7. <span class="arabic">فِيهَا كُتُبٌ</span> ← اس میں لکھی ہوئی تحریریں/احکام ہیں۔</div>
+        <div class="ex-item">8. <span class="arabic">فَإِنَّهَا مُحَرَّمَةٌ</span> ← پس بیشک وہ حرام کی گئی ہے۔</div>
+        <div class="ex-item">9. <span class="arabic">إِنَّ فِيهَا لُوطًا</span> ← بیشک اس میں لوط (علیہ السلام) ہیں۔</div>
+        <div class="ex-item">10. <span class="arabic">فِيهَا مَنَافِعُ</span> ← اس میں بہت سے فائدے ہیں۔</div>
+        <div class="ex-item">11. <span class="arabic">فَلَهُ خَيْرٌ مِنْهَا</span> ← پس اس کے لیے اس سے بہتر بدلہ ہے۔</div>
+        <div class="ex-item">12. <span class="arabic">مِنْهَا أَرْبَعَةٌ</span> ← اس میں سے چار ہیں۔</div>
+        <div class="ex-item">13. <span class="arabic">إِنَّهَا كَلِمَةٌ</span> ← بیشک وہ ایک بات (قول) ہے۔</div>
+        <div class="ex-item">14. <span class="arabic">إِنَّهَا شَجَرَةٌ</span> ← بیشک وہ ایک درخت ہے۔</div>
+        <div class="ex-item">15. <span class="arabic">إِنَّهَا بَقَرَةٌ</span> ← بیشک وہ ایک گائے ہے۔</div>
+        <div class="ex-item">16. <span class="arabic">وَإِنَّهَا لَكَبِيرَةٌ</span> ← اور بیشک وہ یقیناً بہت بھاری/بڑی ہے۔</div>
+        <div class="ex-item">17. <span class="arabic">لَهَا وَلَدٌ</span> ← اس کے لیے اولاد/بیٹا ہے۔</div>
+        <div class="ex-item">18. <span class="arabic">فَلَهَا النِّصْفُ</span> ← پس اس کے لیے نصف (آدھا) ہے۔</div>
+        <div class="ex-item">19. <span class="arabic">فِيهَا عَذَابٌ أَلِيمٌ</span> ← اس میں دردناک عذاب ہے۔</div>
+        <div class="ex-item">20. <span class="arabic">فِيهَا كُتُبٌ قَيِّمَةٌ</span> ← اس میں درست/مستحکم احکام لکھی کتابیں ہیں۔</div>
+        <div class="ex-item">21. <span class="arabic">فِيهَا فَوَاكِهُ كَثِيرَةٌ</span> ← اس میں بہت سے پھل ہیں۔</div>
+        <div class="ex-item">22. <span class="arabic">فِيهَا مَنَافِعُ كَثِيرَةٌ</span> ← اس میں بہت سے فائدے ہیں۔</div>
+        <div class="ex-item">23. <span class="arabic">فِيهَا هُدًى وَنُورٌ</span> ← اس میں ہدایت اور نور ہے۔</div>
+        <div class="ex-item">24. <span class="arabic">فِيهَا نَعِيمٌ مُقِيمٌ</span> ← اس میں ہمیشہ رہنے والی نعمتیں ہیں۔</div>
+        <div class="ex-item">25. <span class="arabic">فِيهَا حُكْمُ اللَّهِ</span> ← اس میں اللہ کا حکم ہے۔</div>
+        <div class="ex-item">26. <span class="arabic">لَهَا سَبْعَةُ أَبْوَابٍ</span> ← اس کے سات دروازے ہیں۔</div>
+        <div class="ex-item">27. <span class="arabic">فِيهَا أَنْهَارٌ مِنْ مَاءٍ</span> ← اس میں پانی کی نہریں ہیں۔</div>
+        <div class="ex-item">28. <span class="arabic">عَلَيْهَا مَلَائِكَةٌ</span> ← اس پر فرشتے مقرر ہیں۔</div>
+        <div class="ex-item">29. <span class="arabic">وَلَهَا عَرْشٌ عَظِيمٌ</span> ← اور اس کے لیے ایک بڑا عرش ہے۔</div>
+        <div class="ex-item">30. <span class="arabic">وَلَهَا كِتَابٌ مَعْلُومٌ</span> ← اور اس کے لیے ایک مقررہ لکھی ہوئی مدت ہے۔</div>
+        <div class="ex-item">31. <span class="arabic">لَا رَيْبَ فِيهَا</span> ← اس میں کوئی شک نہیں ہے۔</div>
+        <div class="ex-item">32. <span class="arabic">فِيهَا اسْمُ اللَّهِ</span> ← اس میں اللہ کا نام ہے۔</div>
+    </div>
+
+    <!-- Page 28 -->
+    <div class="page-header">
+        <span>یونٹ 4</span>
+        <span class="page-number">28</span>
+    </div>
+
+    <div class="section-title">مزید قرآنی جملوں اور آیات کا ترجمہ</div>
+    <div class="exercise-list">
+        <div class="ex-item">33. <span class="arabic">فِيهَا سُرُرٌ مَرْفُوعَةٌ</span> ← اس میں بلند چارپائیاں/تخت ہیں۔</div>
+        <div class="ex-item">34. <span class="arabic">فِيهَا أَنْهَارٌ مِنْ مَاءٍ</span> ← اس میں پانی کی نہریں ہیں۔</div>
+        <div class="ex-item">35. <span class="arabic">فِيهَا عَيْنٌ جَارِيَةٌ</span> ← اس میں بہتا ہوا چشمہ ہے۔</div>
+        <div class="ex-item">36. <span class="arabic">وَالسَّاعَةُ لَا رَيْبَ فِيهَا</span> ← اور قیامت کے آنے میں کوئی شک نہیں ہے۔</div>
+        <div class="ex-item">37. <span class="arabic">إِنَّهَا كَلِمَةٌ هُوَ قَائِلُهَا</span> ← بیشک وہ ایک بات ہے جسے وہ کہنے والا ہے۔</div>
+        <div class="ex-item">38. <span class="arabic">هَذِهِ نَاقَةٌ لَهَا شِرْبٌ</span> ← یہ اونٹنی ہے، اس کے لیے پینے کی باری ہے۔</div>
+        <div class="ex-item">39. <span class="arabic">رِيحٌ فِيهَا عَذَابٌ أَلِيمٌ</span> ← ایسی ہوا جس میں دردناک عذاب ہے۔</div>
+        <div class="ex-item">40. <span class="arabic">فَإِنَّهَا مِنْ تَقْوَى الْقُلُوبِ</span> ← پس بیشک وہ دلوں کے تقویٰ میں سے ہے۔</div>
+        <div class="ex-item">41. <span class="arabic">كَلَّا إِنَّهَا تَذْكِرَةٌ</span> ← ہرگز نہیں! بیشک وہ ایک نصیحت ہے۔</div>
+        <div class="ex-item">42. <span class="arabic">فِيهَا مِنْ كُلِّ الثَّمَرَاتِ وَمَغْفِرَةٌ</span> ← اس میں ہر قسم کے پھل اور مغفرت ہے۔</div>
+        <div class="ex-item">43. <span class="arabic">إِنَّ السَّاعَةَ لَآتِيَةٌ لَا رَيْبَ فِيهَا</span> ← بیشک قیامت یقیناً آنے والی ہے، اس میں کوئی شک نہیں ہے۔</div>
+        <div class="ex-item">44. <span class="arabic">وَأَنَّ السَّاعَةَ آتِيَةٌ لَا رَيْبَ فِيهَا</span> ← اور یہ کہ قیامت آنے والی ہے، اس میں کوئی شک نہیں ہے۔</div>
+        <div class="ex-item">45. <span class="arabic">إِنَّ وَعْدَ اللَّهِ حَقٌّ وَالسَّاعَةُ لَا رَيْبَ فِيهَا</span> ← بیشک اللہ کا وعدہ سچا ہے اور قیامت میں کوئی شک نہیں ہے۔</div>
+        <div class="ex-item">46. <span class="arabic">أَنَّ وَعْدَ اللَّهِ حَقٌّ وَأَنَّ السَّاعَةَ لَا رَيْبَ فِيهَا</span> ← یہ کہ اللہ کا وعدہ سچا ہے اور یہ کہ قیامت میں کوئی شک نہیں ہے۔</div>
+        <div class="ex-item">47. <span class="arabic">لَيْسَ لَهَا مِنْ دُونِ اللَّهِ كَاشِفَةٌ</span> ← اللہ کے سوا اس (تکلیف/قیامت) کو دور کرنے والا کوئی نہیں ہے۔</div>
+        <div class="ex-item">48. <span class="arabic">لَيْسَ لَهَا مِنْ دُونِ اللَّهِ وَلِيٌّ وَلَا شَفِيعٌ</span> ← اللہ کے سوا اس کے لیے کوئی مدگار اور نہ کوئی سفارش کرنے والا ہے۔</div>
+        <div class="ex-item">49. <span class="arabic">وَقُودُهَا النَّاسُ وَالْحِجَارَةُ عَلَيْهَا مَلَائِكَةٌ</span> ← اس کا ایندھن انسان اور پتھر ہیں، اس پر فرشتے (مقرر) ہیں۔</div>
+        <div class="ex-item">50. <span class="arabic">إِنَّهَا بَقَرَةٌ صَفْرَاءُ فَاقِعٌ لَوْنُهَا</span> ← بیشک وہ گائے زرد رنگ کی ہے، اس کا رنگ شدید شوخ ہے۔</div>
+    </div>
+</div>
+        <!-- ========================================================== -->
     <!-- ================ NEW LESSON 13 (PAGE 29) ================== -->
     <!-- ========================================================== -->
     <div id="unit4_lesson13" class="lesson-section">
@@ -901,8 +2266,6 @@
             <div class="ex-item">20. <span class="arabic">لَيْسَ لَهَا مِنْ دُونِ اللهِ وَلِيٌّ وَلَا شَفِيعٌ</span> ← اللہ کے سوا نہ اس کا کوئی مددگار/کارساز ہے اور نہ کوئی سفارش کرنے والا۔</div>
         </div>
     </div>
-
-    <!-- ==================== END OF ALL LESSONS ==================== -->
 </div> <!-- end container -->
 
 <script>
